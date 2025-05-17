@@ -1,0 +1,175 @@
+version: "3.1"
+
+intents:
+  - pilih_masalah
+  - lan_connection_problem
+  - affirm
+  - deny
+  - nlu_fallback
+  - out_of_scope
+  - ap_connection_problem
+  - ap_login_secure
+  - ap_login_hotspot
+  - ap_dissable
+  - tv_connect_device
+  - tv_bluetooth
+  - tv_soundbar
+  - tv_remot
+  - tv_layar_hdmi
+  - tv_network
+
+responses:
+  utter_welcome:
+    - text: "Halo, silakan masukkan permasalahan perangkat yang anda hadapi (LAN, AP, Smart TV)."
+
+  utter_ask_problem_detail:
+    - text: "Silahkan masukkan detail permasalahan?"
+
+  utter_ask_again:
+    - text: "apakah ada permasalahan lain yang ingin saya bantu?"
+
+  utter_selesai:
+    - text: "Baik, terima kasih"
+
+  utter_lan_connection_problem:
+    - text: "Pastikan kabel LAN sudah terpasang dengan benar ke komputer dan router. Coba cabut dan pasang kembali kabelnya."
+    - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
+    - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
+    - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
+    - text: "Restart modem atau router Anda, lalu coba sambungkan kembali dengan kabel LAN."
+    - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
+    - text: "Jika Anda terhubung ke jaringan kantor atau kampus, pastikan tidak ada pembatasan akses atau hubungi administrator jaringan."
+    - text: "Jika masih tidak bisa, coba gunakan koneksi Wi-Fi sementara dan cek apakah masalahnya ada pada jaringan atau perangkat Anda."
+
+  utter_connection_problem:
+    - text: "Coba periksa apakah {device} Anda sudah terhubung ke jaringan Wi-Fi yang benar. Jika masih bermasalah, coba restart perangkat Anda atau hubungi teknisi IT."
+    - text: "Pastikan Wi-Fi di {device} Anda dalam keadaan aktif dan tidak dalam mode pesawat. Jika sinyal sering hilang, coba pindah ke lokasi dengan jangkauan lebih baik."
+    - text: "Coba lupakan jaringan Wi-Fi lalu sambungkan kembali. Jika masih tidak bisa, pastikan tidak ada masalah dengan router atau hotspot yang Anda gunakan."
+    - text: "Mungkin ada gangguan jaringan atau masalah konfigurasi. Coba gunakan jaringan lain atau periksa dengan admin jaringan."
+
+  utter_login_secure:
+    - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi layanan IT UGM."
+    - text: "Pastikan Anda menggunakan akun UGM yang aktif dan sesuai dengan panduan login UGM Secure. Jika ada error, coba hubungi administrator jaringan."
+    - text: "Coba disconnect dari jaringan lalu sambungkan kembali. Jika masih gagal, periksa pengaturan perangkat atau hubungi layanan IT."
+
+  utter_login_hotspot:
+    - text: "Pastikan Anda sudah mendaftar atau memiliki akses untuk login ke hotspot kampus. Jika ada error, coba hapus jaringan dan hubungkan ulang."
+    - text: "Cek kembali username dan password hotspot UGM yang Anda masukkan. Jika masih gagal, hubungi layanan IT kampus."
+    - text: "Mungkin ada batasan akses atau masalah server. Coba sambungkan lagi setelah beberapa saat."
+
+  utter_dissable:
+    - text: "Sepertinya perangkat Anda tidak terhubung ke internet. Coba periksa apakah jaringan Wi-Fi atau data seluler Anda aktif."
+    - text: "Jika tidak ada koneksi internet, coba restart router atau hubungi penyedia layanan internet Anda."
+    - text: "Coba periksa apakah ada pemeliharaan jaringan di area Anda atau hubungi admin jaringan untuk informasi lebih lanjut."
+
+  utter_tv_connect_device:
+    - text: "Hubungkan kabel dari TV ke device anda [insert gambar yaa!]"
+
+  utter_tv_bluetooth:
+    - text: |
+        1. Buka Layar pengaturan. 
+        2. Langkah selanjutnya akan bergantung pada opsi menu TV Anda:
+           • Pilih Remote & Aksesori → Bluetooth.
+           • Pilih Remote & Aksesori → Pengaturan Bluetooth → Bluetooth.
+           • Pilih pengaturan Bluetooth → Bluetooth.
+        3. Ubah Bluetooth dari aktif menjadi nonaktif.
+        4. Atur Bluetooth ke aktif lagi.
+    - text: "Saat menghubungkan empat atau lebih perangkat Bluetooth ke TV, koneksi atau pemasangan mungkin gagal. Matikan perangkat Bluetooth yang tidak Anda gunakan, atau batalkan pemasangan dengan metode lain, lalu sambungkan kembali perangkat Bluetooth yang diinginkan."
+
+  utter_tv_sound:
+    - text: |
+        Ada beberapa pola koneksi antara TV dan soundbar sesuai dengan jack dan fungsi penghubung:
+        Koneksi Bluetooth
+        Koneksi kabel HDMI menggunakan fitur eARC/ARC
+        Koneksi kabel audio digital optik
+        Koneksi kabel audio analog
+    - text: |
+        Jika tidak bisa menghubungkan bluetooth ke TV, kamu dapat menggunakan kabel HDMI. Sambungkan kabel HDMI ke jack HDMI berlabel eARC/ARC:
+        Di bagian belakang TV, temukan jack HDMI IN (A) berlabel eARC/ARC.
+        Di bagian belakang Soundbar, temukan jack HDMI OUT (C) berlabel eARC/ARC.
+        Sambungkan kedua jack dengan kabel HDMI (B).
+        Catatan: Untuk menggunakan fitur eARC, diperlukan kabel HDMI yang kompatibel dengan ethernet.
+        Petunjuk: Jika perangkat terhubung ke jack HDMI tanpa eARC/ARC, tidak ada suara yang akan keluar dari Soundbar. Untuk detail tentang fitur eARC atau ARC, lihat fitur What is the Audio Return Channel (ARC)? artikel.
+
+        Atur Speaker ke sistem Audio.
+        Langkah-langkah di bawah ini adalah contoh di Android TV atau Google TV.
+        Buka Layar pengaturan.
+        Cara mengakses Pengaturan:
+        Langkah selanjutnya akan bergantung pada opsi menu TV Anda:
+        Pilih Tampilan & Suara → Output Audio → Pembicara → Sistem Audio.
+        Pilih Suara — Speaker — Sistem audio.
+        Atur kontrol Sinkronisasi BRAVIA ke Nyala.
+        Catatan: Jika TV Anda selain BRAVIA, lihat instruksi manual yang disertakan dengan TV Anda untuk mencari pengaturan yang terkait dengan fungsi HDMI CEC dan atur ke Nyala.
+        Nyalakan pengaturan Kontrol untuk HDMI di TV dan sistem audio.
+
+  utter_tv_layar_hdmi:
+    - text: |
+        1. Periksa Input TV:
+        Pastikan TV diatur ke input HDMI yang benar. Gunakan (Pilih input) tombol pada remote Anda untuk memutar input hingga yang benar ditampilkan.
+        Pastikan perangkat yang terhubung telah dinyalakan.
+        2. Untuk Model Google TV™ dan Android TV™:
+        Bersihkan data dan cache dari aplikasi ExternalinputServices dan buat kembali koneksi HDMI:
+        Matikan semua perangkat dan lepaskan kabel HDMI.
+        Buka Pengaturan melalui Pengaturan Cepat atau tombol HOME.
+        Jika kendali jarak jauh memiliki Pengaturan Cepat, tekan tombol Pengaturan Cepat dan pilih Pengaturan.
+        Jika kendali jarak jauh tidak memiliki Pengaturan Cepat, tekan tombol HOME dan pilih Pengaturan.
+        Tergantung pada jenis TV Anda, arahkan ke:
+        Pilih Aplikasi → Lihat semua aplikasi → Tampilkan aplikasi Sistem → Layanan Input Eksternal → Hapus data dan Hapus cache → OK.
+        Pilih Aplikasi → Aplikasi sistem → Layanan Input Eksternal → Hapus data dan Hapus cache → OK.
+        Mulai ulang TV dan sambungkan kembali kabel HDMI dengan aman.
+        Uji koneksi dengan beralih ke input HDMI.
+
+  utter_tv_network:
+    - text: |
+        Ikuti langkah-langkah di bawah ini.
+        Buka Layar pengaturan.
+        Langkah selanjutnya akan bergantung pada opsi menu TV Anda:
+        Pilih Jaringan & Internet → Wi-Fi.
+        Pilih Jaringan & Internet → Pengaturan mudah → Wi-Fi.
+        Pilih Jaringan → Pengaturan jaringan → Mudah → Wi-Fi.
+        Pilih jaringan Wi-Fi Anda.
+
+        Catatan:
+        Ikuti langkah-langkah berikut jika muncul layar yang meminta Anda untuk memilih cara terhubung ke router nirkabel:
+        Saat menghubungkan secara manual setelah memilih jaringan dari daftar jaringan nirkabel yang dipindai:
+        Pilih Hubungkan dengan daftar pindai.
+        Saat terhubung secara otomatis dengan tombol WPS pada router nirkabel Anda (atau titik akses):
+        Pilih tombol Connect by WPS.
+        Ikuti petunjuk di layar untuk menyelesaikan pengaturan.
+
+        Setelah memilih jaringan Anda dari daftar pindaian, tekan tombol Enter pada remote control Anda saat bidang teks disorot untuk mengaktifkan keyboard di layar. Kemudian, masukkan kunci keamanan untuk jaringan Anda dan tekan NEXT/ENTER atau FINISH untuk melanjutkan.
+
+        Tekan tombol panah atas pada keyboard di layar untuk huruf besar. Tekan lagi untuk kembali ke huruf kecil.
+        Kunci keamanan peka huruf besar dan kecil. Berhati-hatilah untuk menggunakan huruf besar dan kecil dengan benar.
+
+        Contoh kesalahan:
+        I (kapital i), l (L kecil) dan 1 (nomor satu)
+        0 (angka nol) dan O (kapitalisasi o)
+        d (D kecil) dan b (B kecil)
+        9 (angka sembilan) dan q (Q kecil)
+
+  utter_tv_remot:
+    - text: |
+        Pastikan baterai dimasukkan dengan benar.
+        Ikuti langkah-langkah di bawah ini untuk memasangkan remote.
+        Tekan tombol HOME pada remote control inframerah yang disediakan.
+        Pilih Pengaturan.
+        Pilih pengaturan Kontrol Jarak Jauh Touchpad di kategori JARINGAN & AKSESORI.
+        Pilih Pair Touchpad Remote Control.
+        Pilih Ya, lalu ikuti petunjuk di layar untuk memasangkan.
+
+slots:
+  issue_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: issue_type
+
+entities:
+  - issue_type
+
+actions:
+  - action_session_start
+  - action_contact_it_support
+  

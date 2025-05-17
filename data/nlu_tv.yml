@@ -1,0 +1,55 @@
+version: "3.1"
+
+nlu:
+- intent: tv_connect_device
+  examples: |
+    - Bagaimana cara menghubungkan perangkat ke TV?
+    - Saya ingin menyambungkan HP ke TV, bagaimana caranya?
+    - Kenapa TV saya tidak bisa mendeteksi perangkat yang saya sambungkan?
+    - Perangkat saya tidak muncul di daftar koneksi TV, apa yang harus saya lakukan?
+    - Cara screen mirroring dari HP ke Smart TV?
+
+- intent: tv_bluetooth
+  examples: |
+    - Saya tidak bisa menghubungkan perangkat Bluetooth ke TV
+    - Kenapa Bluetooth di TV saya tidak mendeteksi perangkat saya?
+    - Cara mengaktifkan Bluetooth di Smart TV?
+    - Perangkat saya tidak bisa pairing dengan TV melalui Bluetooth
+    - Bluetooth di TV saya error, bagaimana cara memperbaikinya?
+
+- intent: tv_soundbar
+  examples: |
+    - TV saya tidak bisa terhubung ke soundbar
+    - Kenapa suara dari TV tidak keluar ke soundbar?
+    - Soundbar saya tidak terdeteksi di TV
+    - Bagaimana cara menghubungkan soundbar ke Smart TV?
+    - Ada suara delay saat menggunakan soundbar, bagaimana mengatasinya?
+    - TV saya tidak mengeluarkan suara
+    - Kenapa tidak ada audio yang keluar dari TV saya?
+    - Volume TV saya sudah tinggi tapi tidak ada suara
+    - Audio di TV tiba-tiba hilang, apa penyebabnya?
+    - Saya tidak bisa mendengar suara dari TV meskipun semua kabel sudah terhubung
+    
+- intent: tv_remot
+  examples: |
+    - Remote saya tidak bisa terkoneksi dengan TV
+    - Kenapa remote TV saya tidak berfungsi?
+    - Remote Smart TV tidak merespons, bagaimana cara memperbaikinya?
+    - Saya sudah ganti baterai tapi remote tetap tidak bisa digunakan
+    - Cara pairing ulang remote dengan TV?
+
+- intent: tv_layar_hdmi
+  examples: |
+    - Saya tidak bisa menghubungkan laptop ke TV dengan HDMI
+    - HDMI tidak berfungsi di TV saya
+    - Layar TV tidak menampilkan gambar dari laptop saya
+    - TV saya tidak mendeteksi kabel HDMI
+    - Kenapa layar TV saya berkedip saat menggunakan HDMI?
+
+- intent: tv_network
+  examples: |
+    - Saya tidak bisa menghubungkan TV ke Wi-Fi
+    - Smart TV saya tidak menemukan jaringan Wi-Fi
+    - Koneksi internet di TV sering putus-putus
+    - TV saya tidak bisa streaming karena tidak ada koneksi
+    - Bagaimana cara memperbaiki jaringan internet di Smart TV?
