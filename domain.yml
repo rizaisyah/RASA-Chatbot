@@ -10,7 +10,6 @@ intents:
   - ap_connection_problem
   - ap_login_secure
   - ap_login_hotspot
-  - ap_dissable
   - tv_connect_device
   - tv_bluetooth
   - tv_soundbar
@@ -20,50 +19,76 @@ intents:
 
 responses:
   utter_welcome:
-    - text: "Halo, silakan masukkan permasalahan perangkat yang anda hadapi (LAN, AP, Smart TV)."
+    - text: "Selamat datang. Silakan pilih permasalahan perangkat yang Anda alami (misalnya terkait LAN, Access Point, atau Smart TV), agar saya dapat membantu."
 
   utter_ask_problem_detail:
-    - text: "Silahkan masukkan detail permasalahan?"
+    - text: "Silakan jelaskan detail permasalahan yang Anda alami."
 
   utter_ask_again:
-    - text: "apakah ada permasalahan lain yang ingin saya bantu?"
+    - text: "Apakah ada permasalahan lain yang ingin saya bantu?"
 
   utter_selesai:
     - text: "Baik, terima kasih"
 
   utter_lan_connection_problem:
-    - text: "Pastikan kabel LAN sudah terpasang dengan benar ke komputer dan router. Coba cabut dan pasang kembali kabelnya."
     - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
     - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
     - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
-    - text: "Restart modem atau router Anda, lalu coba sambungkan kembali dengan kabel LAN."
     - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
-    - text: "Jika Anda terhubung ke jaringan kantor atau kampus, pastikan tidak ada pembatasan akses atau hubungi administrator jaringan."
-    - text: "Jika masih tidak bisa, coba gunakan koneksi Wi-Fi sementara dan cek apakah masalahnya ada pada jaringan atau perangkat Anda."
-
-  utter_connection_problem:
-    - text: "Coba periksa apakah {device} Anda sudah terhubung ke jaringan Wi-Fi yang benar. Jika masih bermasalah, coba restart perangkat Anda atau hubungi teknisi IT."
-    - text: "Pastikan Wi-Fi di {device} Anda dalam keadaan aktif dan tidak dalam mode pesawat. Jika sinyal sering hilang, coba pindah ke lokasi dengan jangkauan lebih baik."
-    - text: "Coba lupakan jaringan Wi-Fi lalu sambungkan kembali. Jika masih tidak bisa, pastikan tidak ada masalah dengan router atau hotspot yang Anda gunakan."
-    - text: "Mungkin ada gangguan jaringan atau masalah konfigurasi. Coba gunakan jaringan lain atau periksa dengan admin jaringan."
+    - text: |
+        1. Teknisi jaringan men-download malwarebyte dan juga melakukan update antivirus di komputer terlebih dahulu.
+        2. Teknisi jaringan mencabut semua kabel LAN, dan menancapkan lagi satu demi satu kabel LAN sampai terdeteksi lagi ip conflict.
+        3. Kabel LAN yang apabila dipasang menghasilkan ip conflict ditelusuri/dirunut sumbernya. Periksa ujungnya apakah sampai kepada komputer yang terdaftar dalam jaringan tersebut, atau kah komputer baru yang belum terdaftar dalam jaringan.
+        4. Jika komputer sudah terdaftar, teknisi jaringan menancapkan lagi kabel LAN tersebut, dan mulai cabut satu persatu kabel LAN, sampai pesan ip conflict menghilang.
+        5. Teknisi jaringan merunut kabel LAN yang jika dicabut membuat pesan IP conflict menghilang.
 
   utter_login_secure:
-    - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi layanan IT UGM."
-    - text: "Pastikan Anda menggunakan akun UGM yang aktif dan sesuai dengan panduan login UGM Secure. Jika ada error, coba hubungi administrator jaringan."
-    - text: "Coba disconnect dari jaringan lalu sambungkan kembali. Jika masih gagal, periksa pengaturan perangkat atau hubungi layanan IT."
+    - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi DTI UGM."
+    - text: |
+        Ikuti panduan ini untuk OS Windows:
+        1. Koneksikan wifi ke UGM-Secure.
+        2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
+        3. Jika sudah, klik OK, kemudian jika muncul Certificate pilih Connect untuk memverifikasi.
+
+        Ikuti panduan ini untuk MacOS:
+        1. Koneksikan wifi ke UGM-Secure.
+        2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
+        3. Jika muncul pop up Verify Certificate pilih Continue untuk memverifikasi.
+
+        Ikuti panduan ini untuk Android:
+        1. Koneksikan wifi ke UGM-Secure.
+        2. Isi form sebagai berikut:
+            EAP METHOD: TTLS
+            PHASE 2 AUTHENTICATION : PAP
+            CA CERTIFICATE: (unspecified)
+            Identity: email ugm (tanpa @ugm.ac.id/@mail.ugm.ac.id)
+            Anonymous identity: email ugm
+            Password: password email ugm
+        3. Kemudian klik connect.
+
+        Ikuti panduan ini untuk Iphone:
+        1. Klik setting WLAN pada iPhone.
+        2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
+        3. Pilih Trust untuk memverifikasi Certificate.
 
   utter_login_hotspot:
-    - text: "Pastikan Anda sudah mendaftar atau memiliki akses untuk login ke hotspot kampus. Jika ada error, coba hapus jaringan dan hubungkan ulang."
-    - text: "Cek kembali username dan password hotspot UGM yang Anda masukkan. Jika masih gagal, hubungi layanan IT kampus."
     - text: "Mungkin ada batasan akses atau masalah server. Coba sambungkan lagi setelah beberapa saat."
+    - text: |
+        Panduan ini dapat digunakan untuk Teknisi/Tim IT:
+        1. Teknisi jaringan memastikan  bahwa Wireless Card komputer/laptop telah menyala.
+        2. Teknisi jaringan melakukan scanning sekali lagi sinyal UGM-Hotspot.
+        3. Teknisi jaringan melakukan scanning dengan perangkat/komputer/laptop/Smartphine lain untuk memastikan bahwa sinyal service set identification SSID dari Access Point UGM-Hotspot benar-benar tidak terpancar.
+        4. Apabila dideteksi dengan perangkat lain singal SSID dapat terdeteksi dengan baik, teknisi jaringan  memfokuskan masalah pada perangkat yang tidak dapat mendeteksi sinyal SSDI UGM-Hotspot tersebut
+        5. Apabila dengan perangkat lain sinyal Hotspot UGM tetap tidak terdeteksi, Teknisi jaringan merestart Power Over Ethernet (PoE) Wifi yang berada di ruang Server yaitu cara mecabut kabel adaptor dari PoE kemudian menancapkannya lagi, cabut dan tancapkan kembali kedua kabel UTP yang terhubung ke PoE. Lakukan untuk semua PoE yang ada."
 
-  utter_dissable:
+  utter_connection_problem:
     - text: "Sepertinya perangkat Anda tidak terhubung ke internet. Coba periksa apakah jaringan Wi-Fi atau data seluler Anda aktif."
-    - text: "Jika tidak ada koneksi internet, coba restart router atau hubungi penyedia layanan internet Anda."
-    - text: "Coba periksa apakah ada pemeliharaan jaringan di area Anda atau hubungi admin jaringan untuk informasi lebih lanjut."
+    - text: "Jika tidak ada koneksi internet, coba restart router atau hubungi DTI UGM."
+    - text: "Coba lupakan jaringan Wi-Fi lalu sambungkan kembali. Jika masih tidak bisa, periksa apakah akun SSO masih aktif."
+    - text: "Mungkin ada gangguan jaringan atau masalah konfigurasi. Coba gunakan jaringan UGM lain atau periksa ke tim IT."
 
   utter_tv_connect_device:
-    - text: "Hubungkan kabel dari TV ke device anda [insert gambar yaa!]"
+    - text: "Cari port HDMI dan sambungkan kabel HDMI ke Laptop/ HP Anda"
 
   utter_tv_bluetooth:
     - text: |
