@@ -25,14 +25,6 @@ stories:
   - intent: affirm
   - action: utter_welcome
 
-- story: alur AP 4
-  steps:
-  - intent: ap_dissable
-  - action: utter_dissable
-  - action: utter_ask_again
-  - intent: affirm
-  - action: utter_welcome
-
 - story: alur LAN
   steps:
   - intent: lan_connection_problem
@@ -88,5 +80,3 @@ stories:
   - action: utter_ask_again
   - intent: affirm
   - action: utter_welcome
-
-
