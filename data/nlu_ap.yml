@@ -1,16 +1,6 @@
 version: "3.1"
 
 nlu:
-- intent: ap_connection_problem
-  examples: |
-    - Mengapa {device} saya tidak dapat tersambung ke Wi-Fi?
-    - Saya tidak bisa menemukan jaringan Wi-Fi di {device} saya
-    - {device} saya sering terputus dari internet
-    - Sinyal {device} tiba-tiba menghilang, kenapa ya?
-    - Koneksi {device} ke Wi-Fi sangat tidak stabil
-    - Kenapa jaringan di {device} saya sangat lemot?
-    - Saya tidak bisa connect ke internet pakai {device}
-
 - intent: ap_login_secure
   examples: |
     - Bagaimana cara masuk ke jaringan UGM Secure?
@@ -29,12 +19,18 @@ nlu:
     - Ada error saat mencoba login ke Wi-Fi hotspot kampus
     - Jaringan hotspot UGM tidak bisa digunakan untuk login
 
-- intent: ap_dissable
+- intent: ap_connection_problem
   examples: |
-    - Tidak ada koneksi internet di {device} saya
+    - Tidak ada koneksi internet di komputer/laptop/hp saya
     - Kenapa saya tidak bisa mengakses internet?
-    - Internet di {device} tiba-tiba mati
+    - Internet di laptop/hp tiba-tiba mati
     - Jaringan terputus, saya tidak bisa online
     - Tidak ada akses internet di lokasi saya
     - Saya tidak bisa browsing, jaringan mati
-
+    - Mengapa hp/laptop saya tidak dapat tersambung ke Wi-Fi?
+    - Saya tidak bisa menemukan jaringan Wi-Fi di laptop/hp saya
+    - laptop/hp saya sering terputus dari internet
+    - Sinyal laptop/hp tiba-tiba menghilang, kenapa ya?
+    - Koneksi laptop/hp ke Wi-Fi sangat tidak stabil
+    - Kenapa jaringan di laptop saya sangat lemot?
+    - Saya tidak bisa connect ke internet pakai hp
