@@ -7,7 +7,8 @@ nlu:
     - Saya ingin menyambungkan HP ke TV, bagaimana caranya?
     - Kenapa TV saya tidak bisa mendeteksi perangkat yang saya sambungkan?
     - Perangkat saya tidak muncul di daftar koneksi TV, apa yang harus saya lakukan?
-    - Cara screen mirroring dari HP ke Smart TV?
+    - Cara screen mirroring dari HP/laptop ke Smart TV?
+    - Saya ingin menyambungkan Laptop ke TV, bagaimana caranya?
 
 - intent: tv_bluetooth
   examples: |
