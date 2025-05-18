@@ -1,7 +1,7 @@
 from typing import Any, List, Dict
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SessionStarted, ActionExecuted, EventType, SlotSet
+from rasa_sdk.events import SessionStarted, ActionExecuted, EventType
 
 class ActionContactITSupport(Action):
     def name(self) -> str:
