@@ -1,46 +1,26 @@
 version: "3.1"
 
-nlu:
-- intent: pilih_masalah
-  examples: |
-    - [AP](issue_type)
-    - [LAN](issue_type)
-    - [Smart TV](issue_type)
-    - AP
-    - LAN
-    - Smart TV
-
+nlu: 
 - intent: lan_connection_problem
   examples: |
-    - Saya tidak bisa mendapatkan internet dari kabel LAN yang terhubung
-    - LAN saya sudah terpasang tapi tidak ada koneksi internet
-    - Kenapa jaringan LAN di komputer saya tidak berfungsi?
-    - Kabel LAN saya tersambung tapi tetap tidak bisa internetan
-    - Koneksi LAN tiba-tiba putus, bagaimana cara memperbaikinya?
-    - Tidak ada akses internet meskipun kabel LAN sudah terpasang
-    - Komputer saya tidak mendeteksi kabel LAN yang sudah tersambung
-    - Status jaringan menunjukkan "No Internet" meskipun pakai LAN
-    - Kenapa jaringan kabel saya sangat lambat?
-    - Saya tidak bisa browsing meskipun pakai kabel LAN
+    - koneksi LAN mati
+    - LAN gak konek
+    - kabel LAN error
+    - LAN putus nyambung
+    - jaringan LAN lambat sekali
+    - gak bisa akses internet lewat LAN
+    - kabel LAN nyambung tapi internet nggak jalan
+    - komputer gak detect kabel LAN
+    - lampu LAN gak nyala
+    - LAN tersambung tapi no internet
+    - kabel sudah dicolok tapi internet gak ada
+    - status LAN limited access
+    - jaringan LAN tiba-tiba down
+    - LAN tidak terhubung ke jaringan
+    - port LAN tidak berfungsi
+    - sudah ganti kabel tapi tetap tidak bisa
+    - internet lewat LAN lemot banget
+    - jaringan kabel tidak stabil
+    - saya tidak bisa konek ke jaringan lewat kabel
+    - koneksi kabel terputus sendiri
 
-- intent: affirm
-  examples: |
-    - Iya sudah
-    - Sudah saya coba
-    - Yes
-
-- intent: deny
-  examples: |
-    - Belum
-    - Tidak bisa
-    - No
-
-- intent: nlu_fallback
-  examples: |
-    - {input pengguna yang tidak terdeteksi}
-
-- intent: out_of_scope
-  examples: |
-    - router saya tidak berfungsi
-    - smart tv saya error tidak dan black screen
-    - saya mendapatan internet yang lambat

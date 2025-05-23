@@ -23,7 +23,4 @@ class CustomSessionStart(Action):
         tracker: Tracker,
         domain: Dict[str, Any]
     ) -> List[EventType]:
-        events = [SessionStarted()]
-        dispatcher.utter_message(text="Halo, silakan ketik permasalahan Anda, perangkat LAN, AP, atau smart TV.")
-        events.append(ActionExecuted("utter_welcome"))
-        return events
+        return [SessionStarted()]

@@ -3,34 +3,67 @@ version: "3.1"
 nlu:
 - intent: ap_login_secure
   examples: |
-    - Bagaimana cara masuk ke jaringan UGM Secure?
-    - Saya tidak bisa login ke UGM Secure, ada solusi?
-    - UGM Secure tidak bisa diakses, kenapa?
-    - Gagal login ke jaringan UGM Secure, apa yang harus saya lakukan?
-    - Saya mengalami error saat login ke UGM Secure
-    - Tidak bisa konek ke UGM Secure, gimana ya?
+    - ugm secure error
+    - wifi ugm secure
+    - ugm secure gangguan
+    - secure gak konek
+    - login secure gagal
+    - gak bisa login secure
+    - ugm secure no internet
+    - kenapa ugm secure mati?
+    - jaringan ugm secure down
+    - susah konek ke ugm secure
+    - kok ugm secure gak bisa login?
+    - error terus waktu login ke UGM Secure
+    - gimana cara konek ke UGM Secure?
+    - apakah UGM Secure sedang bermasalah?
+    - saya tidak bisa sambung ke UGM Secure
+    - tidak muncul opsi login UGM Secure
+    - kenapa sinyal UGM Secure tidak ada?
+    - sudah masuk UGM Secure tapi tidak ada internet
+    - password UGM Secure tidak bisa dipakai
+    - login ke UGM Secure selalu gagal otentikasi
+
 
 - intent: ap_login_hotspot
   examples: |
-    - Bagaimana cara login ke hotspot kampus?
-    - Kenapa saya tidak bisa login ke hotspot UGM?
-    - Gagal masuk ke hotspot kampus, tolong bantu
-    - Saya tidak bisa terhubung ke hotspot universitas
-    - Ada error saat mencoba login ke Wi-Fi hotspot kampus
-    - Jaringan hotspot UGM tidak bisa digunakan untuk login
+    - hotspot kampus error
+    - gak bisa login hotspot
+    - hotspot ugm mati
+    - hotspot kampus gak konek
+    - wifi kampus gak bisa
+    - hotspot ugm off
+    - login hotspot gagal
+    - hotspot tidak bisa diakses
+    - hotspot tidak muncul
+    - hotspot gak muncul di daftar wifi
+    - kenapa hotspot kampus tidak bisa dipakai?
+    - tidak ada koneksi dari hotspot kampus
+    - sudah konek hotspot tapi tidak bisa login
+    - login ke hotspot kampus terus gagal
+    - apakah hotspot UGM sedang gangguan?
+    - hotspot kampus saya tidak bisa digunakan
+    - tidak bisa masuk halaman login hotspot UGM
 
 - intent: ap_connection_problem
   examples: |
-    - Tidak ada koneksi internet di komputer/laptop/hp saya
-    - Kenapa saya tidak bisa mengakses internet?
-    - Internet di laptop/hp tiba-tiba mati
-    - Jaringan terputus, saya tidak bisa online
-    - Tidak ada akses internet di lokasi saya
-    - Saya tidak bisa browsing, jaringan mati
-    - Mengapa hp/laptop saya tidak dapat tersambung ke Wi-Fi?
-    - Saya tidak bisa menemukan jaringan Wi-Fi di laptop/hp saya
-    - laptop/hp saya sering terputus dari internet
-    - Sinyal laptop/hp tiba-tiba menghilang, kenapa ya?
-    - Koneksi laptop/hp ke Wi-Fi sangat tidak stabil
-    - Kenapa jaringan di laptop saya sangat lemot?
-    - Saya tidak bisa connect ke internet pakai hp
+    - wifi gak konek
+    - sinyal wifi hilang
+    - jaringan wifi down
+    - gak bisa internetan
+    - koneksi lemot banget
+    - jaringan tidak stabil
+    - internet error terus
+    - kenapa internet mati?
+    - wifi ada tapi tidak bisa internet
+    - kenapa jaringan hp saya putus?
+    - laptop saya tidak terhubung ke internet
+    - hp saya tidak bisa konek ke wifi
+    - koneksi sering terputus sendiri
+    - sinyal wifi tiba-tiba hilang
+    - tidak bisa buka website apapun
+    - semua aplikasi offline, jaringan mati?
+    - sudah terhubung tapi tidak bisa akses internet
+    - internet sangat lambat, tidak bisa digunakan
+    - koneksi sering putus-nyambung
+    - kenapa tidak ada koneksi di laptop saya?

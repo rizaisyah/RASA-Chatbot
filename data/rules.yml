@@ -1,10 +1,20 @@
 version: "3.1"
 
 rules:
-- rule: start
+- rule: pilih ap
   steps:
-  - intent: pilih_masalah
-  - action: utter_ask_problem_detail
+  - intent: pilih_ap
+  - action: utter_pilih_ap
+
+- rule: pilih lan
+  steps:
+  - intent: pilih_lan
+  - action: utter_pilih_lan
+
+- rule: pilih smart tv
+  steps:
+  - intent: pilih_smart_tv
+  - action: utter_pilih_smart_tv
 
 - rule: handle fallback
   steps:
@@ -19,11 +29,11 @@ rules:
 - rule: user wants to continue
   steps:
     - intent: affirm
-    - action: utter_welcome
+    - action: action_session_start
 
 - rule: user wants to end
   steps:
     - intent: deny
-    - action: utter_selesai
+    - action: utter_selesai1
 
 

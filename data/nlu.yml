@@ -1,0 +1,46 @@
+version: "3.1"
+
+nlu:
+- intent: pilih_ap
+  examples: |
+    - Ap
+    - AP
+    - ap
+    - acesspoint
+
+- intent: pilih_lan
+  examples: |
+    - LAN
+    - lan
+
+- intent: pilih_smart_tv
+  examples: |
+    - Smart TV
+    - smart tv
+
+- intent: affirm
+  examples: |
+    - Yes
+    - ada
+    - mau
+    - iya
+
+- intent: deny
+  examples: |
+    - Belum
+    - Tidak bisa
+    - No
+    - gak
+    - tidak
+    - tidak usah
+    - gak usah
+
+- intent: nlu_fallback
+  examples: |
+    - {input pengguna yang tidak terdeteksi}
+
+- intent: out_of_scope
+  examples: |
+    - router saya tidak berfungsi
+    - smart tv saya error tidak dan black screen
+    - saya mendapatan internet yang lambat

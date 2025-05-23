@@ -3,54 +3,152 @@ version: "3.1"
 nlu:
 - intent: tv_connect_device
   examples: |
-    - Bagaimana cara menghubungkan perangkat ke TV?
-    - Saya ingin menyambungkan HP ke TV, bagaimana caranya?
-    - Kenapa TV saya tidak bisa mendeteksi perangkat yang saya sambungkan?
-    - Perangkat saya tidak muncul di daftar koneksi TV, apa yang harus saya lakukan?
-    - Cara screen mirroring dari HP/laptop ke Smart TV?
-    - Saya ingin menyambungkan Laptop ke TV, bagaimana caranya?
+    - tv gak detect hp
+    - tv tidak terhubung ke perangkat
+    - kenapa hp saya gak konek ke tv?
+    - tidak bisa sambung laptop ke smart tv
+    - tv tidak menemukan perangkat saya
+    - tv tidak muncul di hp saat mirroring
+    - bagaimana menghubungkan hp ke smart tv?
+    - kenapa hp saya tidak bisa tampil di tv?
+    - tidak bisa screen share ke tv
+    - mau connect laptop ke tv tapi gagal
+    - cara cast hp ke tv?
+    - tv tidak merespon saat saya sambungkan perangkat
+    - tv tidak tampilkan layar dari laptop
+    - apakah semua hp bisa konek ke tv?
+    - koneksi antara laptop dan tv gagal terus
+    - smart tv tidak muncul saat cari perangkat
+    - sambungan antara hp dan tv terputus sendiri
+    - bagaimana cara tampilkan layar hp ke tv?
+    - gagal mirroring hp ke smart tv
+    - sudah pakai kabel tapi layar tidak muncul di tv
+
 
 - intent: tv_bluetooth
   examples: |
-    - Saya tidak bisa menghubungkan perangkat Bluetooth ke TV
-    - Kenapa Bluetooth di TV saya tidak mendeteksi perangkat saya?
-    - Cara mengaktifkan Bluetooth di Smart TV?
-    - Perangkat saya tidak bisa pairing dengan TV melalui Bluetooth
-    - Bluetooth di TV saya error, bagaimana cara memperbaikinya?
+    - bluetooth tv tidak aktif
+    - tv tidak mendeteksi bluetooth
+    - tv saya tidak bisa pairing dengan speaker
+    - kenapa bluetooth tv tidak jalan?
+    - tidak bisa konek headset ke tv
+    - bluetooth hp tidak ditemukan di tv
+    - bagaimana cara sambungkan bluetooth ke tv?
+    - koneksi bluetooth tv gagal terus
+    - tv tidak bisa pairing bluetooth
+    - bluetooth tv bermasalah
+    - tv tidak terhubung ke perangkat bluetooth
+    - bluetooth speaker tidak muncul di tv
+    - sudah nyalakan bluetooth tapi tidak bisa konek
+    - cara menghubungkan soundbar ke tv lewat bluetooth
+    - kenapa smart tv saya tidak menemukan perangkat bluetooth?
+    - bluetooth tv tidak bisa diaktifkan
+    - pairing gagal antara tv dan hp
+    - tv selalu gagal konek bluetooth
+    - tidak bisa pairing mouse ke smart tv
+    - tv tidak merespons koneksi bluetooth
+    - bluetooth tv mati
 
 - intent: tv_soundbar
   examples: |
-    - TV saya tidak bisa terhubung ke soundbar
-    - Kenapa suara dari TV tidak keluar ke soundbar?
-    - Soundbar saya tidak terdeteksi di TV
-    - Bagaimana cara menghubungkan soundbar ke Smart TV?
-    - Ada suara delay saat menggunakan soundbar, bagaimana mengatasinya?
-    - TV saya tidak mengeluarkan suara
-    - Kenapa tidak ada audio yang keluar dari TV saya?
-    - Volume TV saya sudah tinggi tapi tidak ada suara
-    - Audio di TV tiba-tiba hilang, apa penyebabnya?
-    - Saya tidak bisa mendengar suara dari TV meskipun semua kabel sudah terhubung
+    - suara tv hilang
+    - tv tidak bunyi
+    - tidak ada suara dari tv
+    - kenapa tv saya sunyi?
+    - tv tidak keluarkan suara ke soundbar
+    - soundbar tidak tersambung
+    - soundbar tidak muncul di pengaturan tv
+    - tv tidak connect ke soundbar
+    - kenapa soundbar saya tidak terhubung ke tv?
+    - suara dari tv delay saat pakai soundbar
+    - cara pairing soundbar ke smart tv
+    - tv tidak mendeteksi soundbar
+    - suara tv tidak sinkron dengan soundbar
+    - suara tv hilang setelah sambung soundbar
+    - tv tidak mengeluarkan audio sama sekali
+    - kabel sudah tersambung tapi tidak ada suara
+    - bagaimana sambungkan tv ke soundbar lewat bluetooth?
+    - apakah soundbar saya kompatibel dengan tv ini?
+    - suara dari tv pecah saat sambung ke soundbar
+    - soundbar nyala tapi tidak ada suara dari tv
+    - speaker tv mati
     
 - intent: tv_remot
   examples: |
-    - Remote saya tidak bisa terkoneksi dengan TV
-    - Kenapa remote TV saya tidak berfungsi?
-    - Remote Smart TV tidak merespons, bagaimana cara memperbaikinya?
-    - Saya sudah ganti baterai tapi remote tetap tidak bisa digunakan
-    - Cara pairing ulang remote dengan TV?
+    - remote tv tidak berfungsi
+    - tombol remote tidak merespons
+    - remote tv mati
+    - kenapa remote tidak bisa dipakai?
+    - remote tidak nyala meskipun pakai baterai baru
+    - tv tidak merespons remote
+    - remote smart tv saya error
+    - semua tombol remote tidak bisa ditekan
+    - cara reset remote tv
+    - bagaimana memperbaiki remote tv yang rusak?
+    - sudah ganti baterai tapi tetap tidak bisa
+    - tv tidak mendeteksi remote
+    - remote hilang sinyal
+    - remote tidak connect ke tv
+    - tv tidak merespons perintah dari remote
+    - apakah remote saya perlu di-pairing ulang?
+    - tidak bisa kendalikan tv dengan remote
+    - lampu indikator remote tidak menyala
+    - remote tiba-tiba tidak berfungsi
+    - remote tv saya tidak terhubung setelah restart
+    - remot tidak terhubung
+    - remot mati
 
 - intent: tv_layar_hdmi
   examples: |
-    - Saya tidak bisa menghubungkan laptop ke TV dengan HDMI
-    - HDMI tidak berfungsi di TV saya
-    - Layar TV tidak menampilkan gambar dari laptop saya
-    - TV saya tidak mendeteksi kabel HDMI
-    - Kenapa layar TV saya berkedip saat menggunakan HDMI?
+    - tv tidak menampilkan tampilan dari laptop
+    - tidak ada sinyal dari kabel hdmi
+    - layar tv kosong setelah colok hdmi
+    - hdmi tidak terdeteksi di tv
+    - tv tidak respon saat kabel hdmi dipasang
+    - laptop tidak tampil di tv
+    - tv tidak bisa baca input hdmi
+    - kenapa layar tv gelap setelah pasang hdmi?
+    - gambar dari laptop tidak muncul di tv
+    - tv hanya tampil "no signal"
+    - cara setting hdmi di smart tv
+    - tv saya tidak bisa menerima sinyal dari hdmi
+    - suara ada tapi gambar tidak muncul di tv
+    - hdmi tv error terus
+    - tv tidak otomatis switch ke hdmi
+    - sudah pakai kabel hdmi tapi layar tidak muncul
+    - layar tv berkedip saat sambung laptop
+    - gambar di tv putus-putus saat pakai hdmi
+    - tidak bisa mirroring laptop ke tv lewat hdmi
+    - input hdmi di tv tidak berfungsi
+    - hdmi gak nyambung
 
 - intent: tv_network
   examples: |
-    - Saya tidak bisa menghubungkan TV ke Wi-Fi
-    - Smart TV saya tidak menemukan jaringan Wi-Fi
-    - Koneksi internet di TV sering putus-putus
-    - TV saya tidak bisa streaming karena tidak ada koneksi
-    - Bagaimana cara memperbaiki jaringan internet di Smart TV?
+    - tv tidak konek wifi
+    - jaringan tv bermasalah
+    - smart tv tidak bisa online
+    - koneksi tv ke internet gagal
+    - tv tidak bisa akses internet
+    - tv saya tidak bisa terhubung ke jaringan
+    - tidak ada sinyal wifi di tv
+    - wifi tidak muncul di smart tv
+    - tv disconnect dari wifi terus
+    - koneksi internet di tv error
+    - tv tidak bisa streaming youtube
+    - kenapa tv tidak konek ke wifi?
+    - sinyal wifi lemah di smart tv
+    - cara sambungkan wifi ke smart tv
+    - tv tidak respon saat sambung internet
+    - kenapa jaringan di tv saya hilang sendiri?
+    - koneksi tv selalu terputus
+    - sudah sambung wifi tapi tidak bisa buka internet
+    - tv tidak mendeteksi wifi kampus
+    - jaringan smart tv saya sering hilang
+    - tv gak konek jaringan
+    
+- intent: tv_mati
+  examples: |
+    - tv mati
+    - smart tv mati
+    - tv gak bisa hidup
+    - tv gak nyala

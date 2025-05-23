@@ -1,7 +1,6 @@
 version: "3.1"
 
 intents:
-  - pilih_masalah
   - lan_connection_problem
   - affirm
   - deny
@@ -16,19 +15,32 @@ intents:
   - tv_remot
   - tv_layar_hdmi
   - tv_network
+  - tv_mati
+  - pilih_ap
+  - pilih_lan
+  - pilih_smart_tv
 
 responses:
-  utter_welcome:
-    - text: "Selamat datang. Silakan pilih permasalahan perangkat yang Anda alami (misalnya terkait LAN, Access Point, atau Smart TV), agar saya dapat membantu."
+  utter_pilih_ap:
+    - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan AP. Permasalahan umum yang dapat kami bantu meliputi: koneksi ke UGM Hotspot, UGM Secure, atau jaringan internet yang tidak tersambung."
 
-  utter_ask_problem_detail:
-    - text: "Silakan jelaskan detail permasalahan yang Anda alami."
+  utter_pilih_lan:
+    - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN."
+
+  utter_pilih_smart_tv:
+    - text: "Mohon sampaikan detail kendala yang Anda alami pada Smart TV. Beberapa permasalahan yang dapat kami bantu meliputi: koneksi ke perangkat eksternal, kendala Bluetooth, pengaturan soundbar, masalah pada remote TV, tampilan layar melalui HDMI, atau koneksi jaringan TV."
+
+  # utter_welcome:
+  #   - text: "Selamat datang kembali. Silakan pilih permasalahan perangkat yang Anda alami (misalnya terkait LAN, Access Point, atau Smart TV), agar saya dapat membantu."
+
+  # utter_ask_problem_detail:
+  #   - text: "Silakan jelaskan detail permasalahan yang Anda alami."
 
   utter_ask_again:
     - text: "Apakah ada permasalahan lain yang ingin saya bantu?"
 
-  utter_selesai:
-    - text: "Baik, terima kasih"
+  utter_selesai1:
+    - text: "Terima kasih telah menghubungi bot layanan infrastruktur TILC"
 
   utter_lan_connection_problem:
     - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
@@ -82,106 +94,76 @@ responses:
         5. Apabila dengan perangkat lain sinyal Hotspot UGM tetap tidak terdeteksi, Teknisi jaringan merestart Power Over Ethernet (PoE) Wifi yang berada di ruang Server yaitu cara mecabut kabel adaptor dari PoE kemudian menancapkannya lagi, cabut dan tancapkan kembali kedua kabel UTP yang terhubung ke PoE. Lakukan untuk semua PoE yang ada."
 
   utter_connection_problem:
-    - text: "Sepertinya perangkat Anda tidak terhubung ke internet. Coba periksa apakah jaringan Wi-Fi atau data seluler Anda aktif."
-    - text: "Jika tidak ada koneksi internet, coba restart router atau hubungi DTI UGM."
-    - text: "Coba lupakan jaringan Wi-Fi lalu sambungkan kembali. Jika masih tidak bisa, periksa apakah akun SSO masih aktif."
-    - text: "Mungkin ada gangguan jaringan atau masalah konfigurasi. Coba gunakan jaringan UGM lain atau periksa ke tim IT."
+    - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi."
 
   utter_tv_connect_device:
-    - text: "Cari port HDMI dan sambungkan kabel HDMI ke Laptop/ HP Anda"
+    - text: "Gunakan kabel HDMI untuk sambungan langsung, atau aktifkan screen mirroring jika menggunakan koneksi nirkabel."
 
   utter_tv_bluetooth:
     - text: |
         1. Buka Layar pengaturan. 
-        2. Langkah selanjutnya akan bergantung pada opsi menu TV Anda:
-           • Pilih Remote & Aksesori → Bluetooth.
-           • Pilih Remote & Aksesori → Pengaturan Bluetooth → Bluetooth.
-           • Pilih pengaturan Bluetooth → Bluetooth.
+        2. Pilih Remote & Aksesori → Bluetooth.
         3. Ubah Bluetooth dari aktif menjadi nonaktif.
         4. Atur Bluetooth ke aktif lagi.
-    - text: "Saat menghubungkan empat atau lebih perangkat Bluetooth ke TV, koneksi atau pemasangan mungkin gagal. Matikan perangkat Bluetooth yang tidak Anda gunakan, atau batalkan pemasangan dengan metode lain, lalu sambungkan kembali perangkat Bluetooth yang diinginkan."
-
+        Saat menghubungkan empat atau lebih perangkat Bluetooth ke TV, koneksi atau pemasangan mungkin gagal. Matikan perangkat Bluetooth yang tidak Anda gunakan, atau batalkan pemasangan dengan metode lain, lalu sambungkan kembali perangkat Bluetooth yang diinginkan.
+  
   utter_tv_sound:
-    - text: |
-        Ada beberapa pola koneksi antara TV dan soundbar sesuai dengan jack dan fungsi penghubung:
-        Koneksi Bluetooth
-        Koneksi kabel HDMI menggunakan fitur eARC/ARC
-        Koneksi kabel audio digital optik
-        Koneksi kabel audio analog
-    - text: |
-        Jika tidak bisa menghubungkan bluetooth ke TV, kamu dapat menggunakan kabel HDMI. Sambungkan kabel HDMI ke jack HDMI berlabel eARC/ARC:
-        Di bagian belakang TV, temukan jack HDMI IN (A) berlabel eARC/ARC.
-        Di bagian belakang Soundbar, temukan jack HDMI OUT (C) berlabel eARC/ARC.
-        Sambungkan kedua jack dengan kabel HDMI (B).
-        Catatan: Untuk menggunakan fitur eARC, diperlukan kabel HDMI yang kompatibel dengan ethernet.
-        Petunjuk: Jika perangkat terhubung ke jack HDMI tanpa eARC/ARC, tidak ada suara yang akan keluar dari Soundbar. Untuk detail tentang fitur eARC atau ARC, lihat fitur What is the Audio Return Channel (ARC)? artikel.
-
-        Atur Speaker ke sistem Audio.
-        Langkah-langkah di bawah ini adalah contoh di Android TV atau Google TV.
-        Buka Layar pengaturan.
-        Cara mengakses Pengaturan:
-        Langkah selanjutnya akan bergantung pada opsi menu TV Anda:
-        Pilih Tampilan & Suara → Output Audio → Pembicara → Sistem Audio.
-        Pilih Suara — Speaker — Sistem audio.
-        Atur kontrol Sinkronisasi BRAVIA ke Nyala.
-        Catatan: Jika TV Anda selain BRAVIA, lihat instruksi manual yang disertakan dengan TV Anda untuk mencari pengaturan yang terkait dengan fungsi HDMI CEC dan atur ke Nyala.
-        Nyalakan pengaturan Kontrol untuk HDMI di TV dan sistem audio.
-
-  utter_tv_layar_hdmi:
-    - text: |
-        1. Periksa Input TV:
-        Pastikan TV diatur ke input HDMI yang benar. Gunakan (Pilih input) tombol pada remote Anda untuk memutar input hingga yang benar ditampilkan.
-        Pastikan perangkat yang terhubung telah dinyalakan.
-        2. Untuk Model Google TV™ dan Android TV™:
-        Bersihkan data dan cache dari aplikasi ExternalinputServices dan buat kembali koneksi HDMI:
-        Matikan semua perangkat dan lepaskan kabel HDMI.
-        Buka Pengaturan melalui Pengaturan Cepat atau tombol HOME.
-        Jika kendali jarak jauh memiliki Pengaturan Cepat, tekan tombol Pengaturan Cepat dan pilih Pengaturan.
-        Jika kendali jarak jauh tidak memiliki Pengaturan Cepat, tekan tombol HOME dan pilih Pengaturan.
-        Tergantung pada jenis TV Anda, arahkan ke:
-        Pilih Aplikasi → Lihat semua aplikasi → Tampilkan aplikasi Sistem → Layanan Input Eksternal → Hapus data dan Hapus cache → OK.
-        Pilih Aplikasi → Aplikasi sistem → Layanan Input Eksternal → Hapus data dan Hapus cache → OK.
-        Mulai ulang TV dan sambungkan kembali kabel HDMI dengan aman.
-        Uji koneksi dengan beralih ke input HDMI.
-
+    - text: |      
+        Jika koneksi Bluetooth tidak berhasil, Anda dapat menggunakan kabel HDMI sebagai alternatif untuk menyambungkan TV ke soundbar. Pastikan Anda menggunakan kabel HDMI yang mendukung fitur eARC atau ARC (Audio Return Channel).
+        Langkah-langkah menyambungkan TV ke soundbar melalui HDMI eARC/ARC
+        1. Di bagian belakang TV, temukan port HDMI IN yang berlabel eARC atau ARC.
+        2. Di bagian belakang soundbar, temukan port HDMI OUT yang juga berlabel eARC atau ARC.
+        3. Sambungkan kedua port menggunakan kabel HDMI.
+        
+        Catatan, Untuk memanfaatkan fitur eARC secara optimal, gunakan kabel HDMI yang kompatibel dengan Ethernet. Jika Anda menyambungkan ke port HDMI yang tidak mendukung eARC atau ARC, suara mungkin tidak keluar dari soundbar.
+        
+        Setelah kabel tersambung, ubah pengaturan output suara di TV Anda agar diarahkan ke sistem audio eksternal.
+        Langkah-langkah pengaturan umum
+        1. Buka menu Pengaturan pada TV Anda.
+        2. Masuk ke bagian Suara atau Tampilan & Suara.
+        3. Ubah opsi Speaker menjadi Sistem Audio atau Audio Eksternal, tergantung model TV.
+        4. Aktifkan fitur kontrol HDMI, seperti HDMI-CEC, jika tersedia.
+      
   utter_tv_network:
     - text: |
-        Ikuti langkah-langkah di bawah ini.
-        Buka Layar pengaturan.
-        Langkah selanjutnya akan bergantung pada opsi menu TV Anda:
-        Pilih Jaringan & Internet → Wi-Fi.
-        Pilih Jaringan & Internet → Pengaturan mudah → Wi-Fi.
-        Pilih Jaringan → Pengaturan jaringan → Mudah → Wi-Fi.
-        Pilih jaringan Wi-Fi Anda.
+        Berikut adalah langkah-langkah umum untuk menyambungkan TV ke jaringan Wi-Fi:
 
-        Catatan:
-        Ikuti langkah-langkah berikut jika muncul layar yang meminta Anda untuk memilih cara terhubung ke router nirkabel:
-        Saat menghubungkan secara manual setelah memilih jaringan dari daftar jaringan nirkabel yang dipindai:
-        Pilih Hubungkan dengan daftar pindai.
-        Saat terhubung secara otomatis dengan tombol WPS pada router nirkabel Anda (atau titik akses):
-        Pilih tombol Connect by WPS.
-        Ikuti petunjuk di layar untuk menyelesaikan pengaturan.
+        1. Buka menu pengaturan pada TV Anda.
+        2. Akses bagian Jaringan atau Jaringan & Internet.
+        3. Pilih opsi Wi-Fi, lalu aktifkan jika belum aktif.
+        4. Pilih jaringan Wi-Fi yang tersedia dari daftar yang dipindai.
 
-        Setelah memilih jaringan Anda dari daftar pindaian, tekan tombol Enter pada remote control Anda saat bidang teks disorot untuk mengaktifkan keyboard di layar. Kemudian, masukkan kunci keamanan untuk jaringan Anda dan tekan NEXT/ENTER atau FINISH untuk melanjutkan.
-
-        Tekan tombol panah atas pada keyboard di layar untuk huruf besar. Tekan lagi untuk kembali ke huruf kecil.
-        Kunci keamanan peka huruf besar dan kecil. Berhati-hatilah untuk menggunakan huruf besar dan kecil dengan benar.
-
-        Contoh kesalahan:
-        I (kapital i), l (L kecil) dan 1 (nomor satu)
-        0 (angka nol) dan O (kapitalisasi o)
-        d (D kecil) dan b (B kecil)
-        9 (angka sembilan) dan q (Q kecil)
+        Setelah memilih jaringan:
+        - Tekan tombol Enter pada remote.
+        - Masukkan kata sandi jaringan dengan benar.
+        - Jika terdapat huruf kapital pada sandi, gunakan tombol panah atas pada keyboard di layar untuk mengaktifkan huruf besar, dan tekan lagi untuk kembali ke huruf kecil.
+        - Tekan tombol "Next", "Enter", atau "Finish" untuk menyelesaikan proses koneksi.
 
   utter_tv_remot:
     - text: |
-        Pastikan baterai dimasukkan dengan benar.
-        Ikuti langkah-langkah di bawah ini untuk memasangkan remote.
-        Tekan tombol HOME pada remote control inframerah yang disediakan.
-        Pilih Pengaturan.
-        Pilih pengaturan Kontrol Jarak Jauh Touchpad di kategori JARINGAN & AKSESORI.
-        Pilih Pair Touchpad Remote Control.
-        Pilih Ya, lalu ikuti petunjuk di layar untuk memasangkan.
+        Pastikan baterai remote sudah terpasang dengan benar dan dalam kondisi baik.
+
+        Untuk memasangkan remote ke TV, ikuti langkah-langkah berikut:
+        1. Tekan tombol HOME pada remote.
+        2. Masuk ke menu Pengaturan.
+        3. Cari dan pilih menu pengaturan remote control atau kontrol jarak jauh.
+        4. Pilih opsi "Pasangkan Remote" atau "Pair Remote".
+        5. Pilih Ya, lalu ikuti petunjuk yang muncul di layar sampai proses pairing selesai.
+
+  utter_tv_layar_hdmi:
+  - text: |
+      Jika TV tidak menampilkan gambar saat menggunakan kabel HDMI, berikut beberapa hal yang bisa Anda periksa:
+
+      1. Pastikan TV sudah diatur ke sumber input HDMI yang benar. Gunakan tombol "Input" atau "Source" pada remote untuk memilih port HDMI yang sesuai.
+      2. Periksa apakah kabel HDMI terpasang dengan baik di kedua perangkat (TV dan laptop).
+      3. Pastikan perangkat sumber (seperti laptop) sudah menyala dan berada dalam mode duplikat atau tampilan eksternal.
+      4. Coba gunakan port HDMI lain di TV atau ganti kabel HDMI jika tersedia.
+      5. Jika layar TV berkedip atau tidak stabil, kemungkinan resolusi layar dari perangkat tidak cocok. Cobalah ubah pengaturan resolusinya.
+
+      Jika setelah semua langkah di atas gambar tetap tidak muncul, bisa jadi ada gangguan pada port HDMI, kabel, atau pengaturan perangkat. Coba sambungkan ke perangkat lain untuk memastikan sumber masalahnya.
+
+  utter_tv_mati:
+  - text: "Periksa kembali kabel yang terhubung ke aliran listrik. Jika tetap tidak menyala, silahkan hubungi laboran tau tim IT"
 
 slots:
   issue_type:
@@ -197,4 +179,3 @@ entities:
 actions:
   - action_session_start
   - action_contact_it_support
-  
