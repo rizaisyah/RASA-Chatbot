@@ -6,3 +6,4 @@ rasaenv/
 .DS_Store/
 bridge3.py
 tensorboard/
+epoch/
