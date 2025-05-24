@@ -29,7 +29,7 @@ rules:
 - rule: user wants to continue
   steps:
     - intent: affirm
-    - action: action_session_start
+    - action: utter_welcome_menu
 
 - rule: user wants to end
   steps:

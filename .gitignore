@@ -5,3 +5,4 @@ actions/__pycache__/
 rasaenv/
 .DS_Store/
 bridge3.py
+tensorboard/

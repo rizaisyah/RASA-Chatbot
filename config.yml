@@ -1,36 +1,51 @@
-recipe: default.v1
-
-assistant_id: 20250204-124526-green-resource
-
 language: id
+recipe: default.v1
 
 pipeline:
   - name: WhitespaceTokenizer
+
   - name: RegexFeaturizer
+    use_word_boundaries: True
+    use_lookup_tables: True
+    use_regexes: True
+
   - name: LexicalSyntacticFeaturizer
+
+  - name: CountVectorsFeaturizer
+    analyzer: word
+    min_ngram: 1
+    max_ngram: 2
+
   - name: CountVectorsFeaturizer
     analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
-    intent_tokenization_flag: True
-    intent_split_symbol: "_"
+    min_ngram: 3
+    max_ngram: 5
+
   - name: DIETClassifier
-    epochs: 100
-    constrain_similarities: True
-  - name: EntitySynonymMapper 
+    epochs: 50
+    dropout: 0.2
+    learning_rate: 0.005
+    batch_size: [32, 64]
+    embedding_dimension: 20
+    constrain_similarities: true
+    tensorboard_log_directory: "tensorboard"
+    tensorboard_log_level: "epoch"
+
+  - name: EntitySynonymMapper
+
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.2
 
-
 policies:
-  - name: MemoizationPolicy
-  - name: TEDPolicy
-    max_history: 5
-    epochs: 100
-  - name: RulePolicy
-    core_fallback_threshold: 0.4
-    core_fallback_action_name: "action_contact_it_support"
-    enable_fallback_prediction: true
-    restrict_rules: true
-    check_for_contradictions: true
+- name: MemoizationPolicy
+- name: TEDPolicy
+  max_history: 5
+  epochs: 100
+- name: RulePolicy
+  core_fallback_threshold: 0.4
+  core_fallback_action_name: "action_contact_it_support"
+  enable_fallback_prediction: true
+  restrict_rules: true
+  check_for_contradictions: true
+assistant_id: 20250524-154057-lead-era

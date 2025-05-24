@@ -30,17 +30,16 @@ responses:
   utter_pilih_smart_tv:
     - text: "Mohon sampaikan detail kendala yang Anda alami pada Smart TV. Beberapa permasalahan yang dapat kami bantu meliputi: koneksi ke perangkat eksternal, kendala Bluetooth, pengaturan soundbar, masalah pada remote TV, tampilan layar melalui HDMI, atau koneksi jaringan TV."
 
-  # utter_welcome:
-  #   - text: "Selamat datang kembali. Silakan pilih permasalahan perangkat yang Anda alami (misalnya terkait LAN, Access Point, atau Smart TV), agar saya dapat membantu."
-
-  # utter_ask_problem_detail:
-  #   - text: "Silakan jelaskan detail permasalahan yang Anda alami."
-
   utter_ask_again:
     - text: "Apakah ada permasalahan lain yang ingin saya bantu?"
 
   utter_selesai1:
     - text: "Terima kasih telah menghubungi bot layanan infrastruktur TILC"
+
+  utter_welcome_menu:
+    - text: ""
+      custom:
+        show_inline_menu: true
 
   utter_lan_connection_problem:
     - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
@@ -178,4 +177,4 @@ entities:
 
 actions:
   - action_session_start
-  - action_contact_it_support
+  - action_contact_it_support 
