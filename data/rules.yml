@@ -6,11 +6,6 @@ rules:
   - intent: pilih_ap
   - action: utter_pilih_ap
 
-- rule: pilih lan
-  steps:
-  - intent: pilih_lan
-  - action: utter_pilih_lan
-
 - rule: pilih smart tv
   steps:
   - intent: pilih_smart_tv
@@ -40,3 +35,8 @@ rules:
     - action: utter_ask_again
     - intent: deny
     - action: utter_selesai1
+
+- rule: user says hello
+  steps:
+    - intent: greet
+    - action: utter_greet

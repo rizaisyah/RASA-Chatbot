@@ -1,6 +1,16 @@
 version: "3.1"
 
 nlu:
+- intent: greet
+  examples: |
+    - halo
+    - hi
+    - selamat pagi
+    - permisi
+    - selamat siang
+    - selamat sore
+    - selamat malam
+
 - intent: pilih_ap
   examples: |
     - Ap
@@ -24,6 +34,10 @@ nlu:
     - ada
     - mau
     - iya
+    - ya
+    - ya bantu saya
+    - ya tolong
+    - ya, saya Masuk
 
 - intent: deny
   examples: |
@@ -34,6 +48,8 @@ nlu:
     - tidak
     - tidak usah
     - gak usah
+    - tidak, terima kasih
+    - gak makasih
 
 - intent: nlu_fallback
   examples: |

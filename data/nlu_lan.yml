@@ -3,12 +3,17 @@ version: "3.1"
 nlu: 
 - intent: lan_connection_problem
   examples: |
+    - tidka bisa konek
     - koneksi LAN mati
     - LAN gak konek
+    - komputer lab gak bisa internet
+    - LAN gak bisa connect
     - kabel LAN error
     - LAN putus nyambung
     - jaringan LAN lambat sekali
-    - gak bisa akses internet lewat LAN
+    - koneksi lewat kabel gak bisa
+    - gak bisa akses internet lewat LAN ke komputer
+    - gak bisa akses internet lewat LAN ke laptop
     - kabel LAN nyambung tapi internet nggak jalan
     - komputer gak detect kabel LAN
     - lampu LAN gak nyala
@@ -22,5 +27,8 @@ nlu:
     - internet lewat LAN lemot banget
     - jaringan kabel tidak stabil
     - saya tidak bisa konek ke jaringan lewat kabel
-    - koneksi kabel terputus sendiri
+    - koneksi kabel intenet terputus sendiri
+    - laptop saya tidka bisa terhubung ke LAN
+    - LAN tidak terdeteksi di komputer
+    - komputer saya tidak bisa terhubung ke internet
 
