@@ -4,30 +4,15 @@ nlu:
 - intent: greet
   examples: |
     - halo
+    - hello
+    - hai
     - hi
     - selamat pagi
     - permisi
     - selamat siang
     - selamat sore
     - selamat malam
-
-- intent: pilih_ap
-  examples: |
-    - Ap
-    - AP
-    - ap
-    - acesspoint
-
-- intent: pilih_lan
-  examples: |
-    - LAN
-    - lan
-
-- intent: pilih_smart_tv
-  examples: |
-    - Smart TV
-    - smart tv
-
+    
 - intent: affirm
   examples: |
     - Yes
@@ -60,3 +45,21 @@ nlu:
     - router saya tidak berfungsi
     - smart tv saya error tidak dan black screen
     - saya mendapatan internet yang lambat
+
+# berbeda yeah
+- intent: pilih_ap
+  examples: |
+    - Ap
+    - AP
+    - ap
+    - acesspoint
+
+- intent: pilih_lan
+  examples: |
+    - LAN
+    - lan
+
+- intent: pilih_smart_tv
+  examples: |
+    - Smart TV
+    - smart tv

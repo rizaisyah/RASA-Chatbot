@@ -25,9 +25,9 @@ responses:
   utter_pilih_ap:
     - text: |
         Mohon sampaikan detail kendala yang Anda alami pada jaringan AP. Permasalahan umum yang dapat kami bantu meliputi:
-        1. Koneksi ke UGM Hotspot.
-        2. UGM Secure.
-        3. jaringan internet yang tidak tersambung.
+        - Koneksi ke UGM Hotspot.
+        - UGM Secure.
+        - jaringan internet yang tidak tersambung.
 
   utter_pilih_lan:
     - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN."
@@ -35,12 +35,13 @@ responses:
   utter_pilih_smart_tv:
     - text: |
         Mohon sampaikan detail kendala yang Anda alami pada Smart TV. Beberapa permasalahan yang dapat kami bantu meliputi:
-        1. Koneksi ke perangkat eksternal.
-        2. kendala sambungan ke Bluetooth.
-        3. Pengaturan soundbar.
-        4. Masalah pada remote TV.
-        5. Sambungan HDMI.
-        6. Koneksi jaringan TV
+        - Koneksi ke perangkat eksternal.
+        - Sambungan ke Bluetooth.
+        - Pengaturan soundbar.
+        - Masalah pada remote TV.
+        - Sambungan HDMI.
+        - Koneksi jaringan TV
+        - TV tidak menyala.
 
   utter_ask_again:
     - text: "Apakah ada permasalahan lain yang ingin saya bantu?"
@@ -59,10 +60,10 @@ responses:
         show_inline_menu: true
 
   utter_lan_connection_problem:
-    - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
-    - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
-    - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
-    - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
+#    - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
+#    - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
+#    - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
+#    - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
     - text: |
         1. Teknisi jaringan men-download malwarebyte dan juga melakukan update antivirus di komputer terlebih dahulu.
         2. Teknisi jaringan mencabut semua kabel LAN, dan menancapkan lagi satu demi satu kabel LAN sampai terdeteksi lagi ip conflict.

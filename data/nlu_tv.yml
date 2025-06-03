@@ -124,6 +124,7 @@ nlu:
 
 - intent: tv_network
   examples: |
+    - internet mati
     - tv tidak konek wifi
     - jaringan tv bermasalah
     - smart tv tidak bisa online
@@ -150,5 +151,6 @@ nlu:
   examples: |
     - tv mati
     - smart tv mati
+    - tv blank
     - tv gak bisa hidup
     - tv gak nyala

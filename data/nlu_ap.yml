@@ -3,6 +3,7 @@ version: "3.1"
 nlu:
 - intent: ap_login_secure
   examples: |
+    - ugm secure 
     - ugm secure error
     - wifi ugm secure
     - ugm secure gangguan
@@ -15,6 +16,7 @@ nlu:
     - susah konek ke ugm secure
     - kok ugm secure gak bisa login?
     - error terus waktu login ke UGM Secure
+    - gak bisa connect ugm secure
     - gimana cara konek ke UGM Secure?
     - apakah UGM Secure sedang bermasalah?
     - saya tidak bisa sambung ke UGM Secure
@@ -27,26 +29,28 @@ nlu:
 
 - intent: ap_login_hotspot
   examples: |
-    - hotspot kampus error
-    - gak bisa login hotspot
+    - ugm hotspot 
+    - ga bisa connect ugm hotspot
+    - gak bisa login ugm hotspot
     - hotspot ugm mati
     - hotspot kampus gak konek
     - wifi kampus gak bisa
     - hotspot ugm off
+    - login ugm hotspot
     - login hotspot gagal
     - hotspot tidak bisa diakses
     - hotspot tidak muncul
     - hotspot gak muncul di daftar wifi
-    - kenapa hotspot kampus tidak bisa dipakai?
+    - gak bisa connect ugm hotspot
     - tidak ada koneksi dari hotspot kampus
     - sudah konek hotspot tapi tidak bisa login
     - login ke hotspot kampus terus gagal
     - apakah hotspot UGM sedang gangguan?
-    - hotspot kampus saya tidak bisa digunakan
-    - tidak bisa masuk halaman login hotspot UGM
+    - tidak bisa masuk halaman login ugm hotspot
 
 - intent: ap_connection_problem
   examples: |
+    - internet mati
     - wifi gak konek
     - sinyal wifi hilang
     - jaringan wifi down
