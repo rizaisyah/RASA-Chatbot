@@ -4,30 +4,15 @@ nlu:
 - intent: greet
   examples: |
     - halo
+    - hello
+    - hai
     - hi
     - selamat pagi
     - permisi
     - selamat siang
     - selamat sore
     - selamat malam
-
-- intent: pilih_ap
-  examples: |
-    - Ap
-    - AP
-    - ap
-    - acesspoint
-
-- intent: pilih_lan
-  examples: |
-    - LAN
-    - lan
-
-- intent: pilih_smart_tv
-  examples: |
-    - Smart TV
-    - smart tv
-
+    
 - intent: affirm
   examples: |
     - Yes
@@ -60,3 +45,23 @@ nlu:
     - router saya tidak berfungsi
     - smart tv saya error tidak dan black screen
     - saya mendapatan internet yang lambat
+
+- intent: cek_slot
+  examples: |
+    - cek isi slot
+    - tampilkan isi slot
+    - slot apa sekarang?
+    - saya ingin tahu isi slot
+    - device yang dipilih apa?
+
+- intent: choose_device_ap
+  examples: |
+    - /choose_device{"device_type": "AP"}
+
+- intent: choose_device_lan
+  examples: |
+    - /choose_device{"device_type": "LAN"}
+
+- intent: choose_device_tv
+  examples: |
+    - /choose_device{"device_type": "Smart TV"}

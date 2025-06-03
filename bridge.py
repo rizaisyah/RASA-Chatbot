@@ -19,9 +19,9 @@ RASA_URL = "http://localhost:5005/webhooks/rest/webhook"
 # Fungsi untuk kirim menu tombol inline
 async def send_inline_menu(context, chat_id, text=""):
     keyboard = [
-        [InlineKeyboardButton("AP (Internet)", callback_data="AP")],
-        [InlineKeyboardButton("LAN", callback_data="LAN")],
-        [InlineKeyboardButton("Smart TV", callback_data="smart tv")]
+        [InlineKeyboardButton("AP (Internet)", callback_data='/choose_device_ap{"device_type": "AP"}')],
+        [InlineKeyboardButton("LAN", callback_data='/choose_device_lan{"device_type": "LAN"}')],
+        [InlineKeyboardButton("Smart TV", callback_data='/choose_device_tv{"device_type": "Smart TV"}')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await context.bot.send_message(chat_id=chat_id, text=text, reply_markup=reply_markup)
@@ -52,18 +52,26 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    user_input = query.data
     sender = query.from_user.id
+    user_input = query.data  # Sudah dalam bentuk /choose_device_ap{"device_type": "AP"}
 
-    res = requests.post(RASA_URL, json={"sender": str(sender), "message": user_input})
+    res = requests.post(
+        RASA_URL,
+        json={
+            "sender": str(sender),
+            "message": user_input
+        }
+    )
+
     for r in res.json():
-        custom = r.get("custom", {})
         text = r.get("text", "")
-
+        custom = r.get("custom", {})
         if custom.get("show_inline_menu"):
             await send_inline_menu(context, sender, text or "Silakan pilih permasalahan Anda:")
         elif text:
             await context.bot.send_message(chat_id=sender, text=text)
+
+    print(f"[DEBUG] Telegram button clicked: {user_input}")
 
 # Main program
 if __name__ == "__main__":

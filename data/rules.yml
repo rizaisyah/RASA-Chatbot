@@ -1,15 +1,52 @@
 version: "3.1"
 
 rules:
-- rule: pilih ap
+- rule: alur LAN
+  condition:
+    - slot_was_set:
+        - device_type: "LAN"
   steps:
-  - intent: pilih_ap
-  - action: utter_pilih_ap
+  # - intent: pilih_lan
+  # - action: utter_pilih_lan
+  - intent: lan_connection_problem
+  - action: action_filter_by_device
+  - action: utter_lan_connection_problem
+  - action: utter_ask_again
 
-- rule: pilih smart tv
+- rule: alur AP 1
+  condition:
+    - slot_was_set:
+        - device_type: "AP"
   steps:
-  - intent: pilih_smart_tv
-  - action: utter_pilih_smart_tv
+  - intent: ap_connection_problem
+  - action: action_filter_by_device
+  - action: utter_connection_problem
+  - action: utter_ask_again
+
+- rule: alur TV 5
+  condition:
+    - slot_was_set:
+        - device_type: "Smart TV"
+  steps:
+  - intent: tv_network
+  - action: action_filter_by_device
+  - action: utter_tv_network
+  - action: utter_ask_again
+
+- rule: Tanggapi pilih AP
+  steps:
+    - intent: choose_device_ap
+    - action: utter_pilih_ap
+
+- rule: Tanggapi pilih LAN
+  steps:
+    - intent: choose_device_lan
+    - action: utter_pilih_lan
+
+- rule: Tanggapi pilih Smart TV
+  steps:
+    - intent: choose_device_tv
+    - action: utter_pilih_smart_tv
 
 - rule: handle fallback
   steps:
@@ -40,3 +77,8 @@ rules:
   steps:
     - intent: greet
     - action: utter_greet
+
+- rule: Cek slot device_type
+  steps:
+    - intent: cek_slot
+    - action: action_show_slots

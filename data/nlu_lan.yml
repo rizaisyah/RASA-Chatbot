@@ -3,6 +3,7 @@ version: "3.1"
 nlu: 
 - intent: lan_connection_problem
   examples: |
+    - internet mati
     - tidka bisa konek
     - koneksi LAN mati
     - LAN gak konek
@@ -31,4 +32,3 @@ nlu:
     - laptop saya tidka bisa terhubung ke LAN
     - LAN tidak terdeteksi di komputer
     - komputer saya tidak bisa terhubung ke internet
-

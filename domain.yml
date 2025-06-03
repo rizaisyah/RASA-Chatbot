@@ -17,17 +17,18 @@ intents:
   - tv_layar_hdmi
   - tv_network
   - tv_mati
-  - pilih_ap
-  - pilih_lan
-  - pilih_smart_tv
+  - choose_device_ap
+  - choose_device_lan
+  - choose_device_tv
+  - cek_slot
 
 responses:
   utter_pilih_ap:
     - text: |
         Mohon sampaikan detail kendala yang Anda alami pada jaringan AP. Permasalahan umum yang dapat kami bantu meliputi:
-        1. Koneksi ke UGM Hotspot.
-        2. UGM Secure.
-        3. jaringan internet yang tidak tersambung.
+        - Login UGM Hotspot.
+        - Login UGM Secure.
+        - Jaringan internet yang tidak tersambung.
 
   utter_pilih_lan:
     - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN."
@@ -35,12 +36,13 @@ responses:
   utter_pilih_smart_tv:
     - text: |
         Mohon sampaikan detail kendala yang Anda alami pada Smart TV. Beberapa permasalahan yang dapat kami bantu meliputi:
-        1. Koneksi ke perangkat eksternal.
-        2. kendala sambungan ke Bluetooth.
-        3. Pengaturan soundbar.
-        4. Masalah pada remote TV.
-        5. Sambungan HDMI.
-        6. Koneksi jaringan TV
+        - Koneksi ke perangkat eksternal.
+        - Sambungan ke Bluetooth.
+        - Pengaturan soundbar.
+        - Masalah pada remote TV.
+        - Sambungan HDMI.
+        - Koneksi jaringan TV
+        - TV tidak menyala.
 
   utter_ask_again:
     - text: "Apakah ada permasalahan lain yang ingin saya bantu?"
@@ -59,10 +61,10 @@ responses:
         show_inline_menu: true
 
   utter_lan_connection_problem:
-    - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
-    - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
-    - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
-    - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
+    # - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
+    # - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
+    # - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
+    # - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
     - text: |
         1. Teknisi jaringan men-download malwarebyte dan juga melakukan update antivirus di komputer terlebih dahulu.
         2. Teknisi jaringan mencabut semua kabel LAN, dan menancapkan lagi satu demi satu kabel LAN sampai terdeteksi lagi ip conflict.
@@ -110,7 +112,7 @@ responses:
         5. Apabila dengan perangkat lain sinyal Hotspot UGM tetap tidak terdeteksi, Teknisi jaringan merestart Power Over Ethernet (PoE) Wifi yang berada di ruang Server yaitu cara mecabut kabel adaptor dari PoE kemudian menancapkannya lagi, cabut dan tancapkan kembali kedua kabel UTP yang terhubung ke PoE. Lakukan untuk semua PoE yang ada."
 
   utter_connection_problem:
-    - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi."
+    - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi kampus."
 
   utter_tv_connect_device:
     - text: "Gunakan kabel HDMI untuk sambungan langsung, atau aktifkan screen mirroring jika menggunakan koneksi nirkabel."
@@ -182,16 +184,22 @@ responses:
   - text: "Periksa kembali kabel yang terhubung ke aliran listrik. Jika tetap tidak menyala, silahkan hubungi laboran tau tim IT"
 
 slots:
-  issue_type:
+  device_type:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
-        entity: issue_type
+        entity: device_type
 
 entities:
-  - issue_type
+  - device_type
 
 actions:
   - action_session_start
   - action_contact_it_support 
+  - action_show_slots
+  - action_filter_by_device
+
+# session_config:
+#   session_expiration_time: 60  # value in minutes, 0 means infinitely long
+#   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
