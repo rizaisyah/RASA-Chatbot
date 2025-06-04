@@ -29,6 +29,7 @@ nlu:
     - Belum
     - Tidak bisa
     - No
+    - nope
     - gak
     - tidak
     - tidak usah
@@ -49,17 +50,15 @@ nlu:
 # berbeda yeah
 - intent: pilih_ap
   examples: |
-    - Ap
-    - AP
-    - ap
+    - [AP999](issue_type)
     - acesspoint
 
 - intent: pilih_lan
   examples: |
-    - LAN
-    - lan
+    - [LAN999](issue_type)
+    - lan123
 
 - intent: pilih_smart_tv
   examples: |
     - Smart TV
-    - smart tv
+    - [smart tv999](issue_type)

@@ -19,9 +19,9 @@ RASA_URL = "http://localhost:5005/webhooks/rest/webhook"
 # Fungsi untuk kirim menu tombol inline
 async def send_inline_menu(context, chat_id, text=""):
     keyboard = [
-        [InlineKeyboardButton("AP (Internet)", callback_data="AP")],
-        [InlineKeyboardButton("LAN", callback_data="LAN")],
-        [InlineKeyboardButton("Smart TV", callback_data="smart tv")]
+        [InlineKeyboardButton("AP (Internet)", callback_data="AP999")],
+        [InlineKeyboardButton("LAN", callback_data="LAN999")],
+        [InlineKeyboardButton("Smart TV", callback_data="smart tv999")]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await context.bot.send_message(chat_id=chat_id, text=text, reply_markup=reply_markup)

@@ -1,7 +1,7 @@
 from typing import Any, List, Dict
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SessionStarted, EventType
+from rasa_sdk.events import SessionStarted, EventType, SlotSet, FollowupAction
 
 class ActionContactITSupport(Action):
     def name(self) -> str:
@@ -22,5 +22,5 @@ class CustomSessionStart(Action):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[str, Any]
-    ) -> List[EventType]:
+    ) -> List[EventType]: 
         return [SessionStarted()]

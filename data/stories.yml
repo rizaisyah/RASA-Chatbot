@@ -1,25 +1,7 @@
 version: "3.1"
 
 stories:
-- story: alur AP 1
-  steps:
-  - intent: ap_connection_problem
-  - action: utter_connection_problem
-  - action: utter_ask_again
-
-- story: alur AP 2
-  steps:
-  - intent: ap_login_secure
-  - action: utter_login_secure
-  - action: utter_ask_again
-
-- story: alur AP 3
-  steps:
-  - intent: ap_login_hotspot
-  - action: utter_login_hotspot
-  - action: utter_ask_again
-
-- story: alur LAN
+- story: pilih smart lan
   steps:
   - intent: pilih_lan
   - action: utter_pilih_lan
@@ -27,43 +9,64 @@ stories:
   - action: utter_lan_connection_problem
   - action: utter_ask_again
 
-- story: alur TV 1
+- rule: alur AP 2     
+  # condition:
+  # - slot_was_set:
+  #   - issue_type: "AP999"
+  steps:
+  - intent: ap_login_secure
+  - action: utter_login_secure
+  - action: utter_ask_again
+
+- rule: alur AP 3
+  # condition:
+  # - slot_was_set:
+  #   - issue_type: "AP999"
+  steps:
+  - intent: ap_login_hotspot
+  - action: utter_login_hotspot
+  - action: utter_ask_again
+
+- rule: alur TV 1
   steps:
   - intent: tv_connect_device
   - action: utter_tv_connect_device
   - action: utter_ask_again
 
-- story: alur TV 2
+- rule: alur TV 2
   steps:
   - intent: tv_bluetooth
   - action: utter_tv_bluetooth
   - action: utter_ask_again
 
-- story: alur TV 3
+- rule: alur TV 3
   steps:
   - intent: tv_soundbar
   - action: utter_tv_sound
   - action: utter_ask_again
 
-- story: alur TV 4
+- rule: alur TV 4
   steps:
   - intent: tv_remot
   - action: utter_tv_remot
   - action: utter_ask_again
 
-- story: alur TV 5
+- rule: alur TV 5
   steps:
   - intent: tv_layar_hdmi
   - action: utter_tv_layar_hdmi
   - action: utter_ask_again
 
-- story: alur TV 5
+- rule: alur TV 5
+  # condition:
+  #   - slot_was_set:
+  #       - issue_type: "AP999"
   steps:
   - intent: tv_network
   - action: utter_tv_network
   - action: utter_ask_again
 
-- story: alur TV 5
+- rule: alur TV 5
   steps:
   - intent: tv_mati
   - action: utter_tv_mati

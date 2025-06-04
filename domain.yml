@@ -2,12 +2,14 @@ version: "3.1"
 
 intents:
   - greet
-  - lan_connection_problem
   - affirm
   - deny
   - nlu_fallback
   - out_of_scope
-  - ap_connection_problem
+  - pilih_ap
+  - pilih_lan
+  - pilih_smart_tv
+  - lan_connection_problem
   - ap_login_secure
   - ap_login_hotspot
   - tv_connect_device
@@ -17,17 +19,13 @@ intents:
   - tv_layar_hdmi
   - tv_network
   - tv_mati
-  - pilih_ap
-  - pilih_lan
-  - pilih_smart_tv
 
 responses:
   utter_pilih_ap:
     - text: |
         Mohon sampaikan detail kendala yang Anda alami pada jaringan AP. Permasalahan umum yang dapat kami bantu meliputi:
-        - Koneksi ke UGM Hotspot.
-        - UGM Secure.
-        - jaringan internet yang tidak tersambung.
+        - Login UGM Hotspot.
+        - Login UGM Secure.
 
   utter_pilih_lan:
     - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN."
@@ -110,8 +108,8 @@ responses:
         4. Apabila dideteksi dengan perangkat lain singal SSID dapat terdeteksi dengan baik, teknisi jaringan  memfokuskan masalah pada perangkat yang tidak dapat mendeteksi sinyal SSDI UGM-Hotspot tersebut
         5. Apabila dengan perangkat lain sinyal Hotspot UGM tetap tidak terdeteksi, Teknisi jaringan merestart Power Over Ethernet (PoE) Wifi yang berada di ruang Server yaitu cara mecabut kabel adaptor dari PoE kemudian menancapkannya lagi, cabut dan tancapkan kembali kedua kabel UTP yang terhubung ke PoE. Lakukan untuk semua PoE yang ada."
 
-  utter_connection_problem:
-    - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi."
+  # utter_connection_problem:
+  #   - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi."
 
   utter_tv_connect_device:
     - text: "Gunakan kabel HDMI untuk sambungan langsung, atau aktifkan screen mirroring jika menggunakan koneksi nirkabel."
@@ -195,4 +193,4 @@ entities:
 
 actions:
   - action_session_start
-  - action_contact_it_support 
+  - action_contact_it_support
