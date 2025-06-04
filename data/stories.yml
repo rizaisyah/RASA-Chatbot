@@ -1,12 +1,6 @@
 version: "3.1"
 
 stories:
-- story: alur AP 1
-  steps:
-  - intent: ap_connection_problem
-  - action: utter_connection_problem
-  - action: utter_ask_again
-
 - story: alur AP 2
   steps:
   - intent: ap_login_secure
@@ -57,13 +51,13 @@ stories:
   - action: utter_tv_layar_hdmi
   - action: utter_ask_again
 
-- story: alur TV 5
+- story: alur TV 6
   steps:
   - intent: tv_network
   - action: utter_tv_network
   - action: utter_ask_again
 
-- story: alur TV 5
+- story: alur TV 7
   steps:
   - intent: tv_mati
   - action: utter_tv_mati

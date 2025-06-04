@@ -26,7 +26,6 @@ nlu:
     - password UGM Secure tidak bisa dipakai
     - login ke UGM Secure selalu gagal otentikasi
 
-
 - intent: ap_login_hotspot
   examples: |
     - ugm hotspot 
@@ -47,27 +46,3 @@ nlu:
     - login ke hotspot kampus terus gagal
     - apakah hotspot UGM sedang gangguan?
     - tidak bisa masuk halaman login ugm hotspot
-
-- intent: ap_connection_problem
-  examples: |
-    - internet mati
-    - wifi gak konek
-    - sinyal wifi hilang
-    - jaringan wifi down
-    - gak bisa internetan
-    - koneksi lemot banget
-    - jaringan tidak stabil
-    - internet error terus
-    - kenapa internet mati?
-    - wifi ada tapi tidak bisa internet
-    - kenapa jaringan hp saya putus?
-    - laptop saya tidak terhubung ke internet
-    - hp saya tidak bisa konek ke wifi
-    - koneksi sering terputus sendiri
-    - sinyal wifi tiba-tiba hilang
-    - tidak bisa buka website apapun
-    - semua aplikasi offline, jaringan mati?
-    - sudah terhubung tapi tidak bisa akses internet
-    - internet sangat lambat, tidak bisa digunakan
-    - koneksi sering putus-nyambung
-    - kenapa tidak ada koneksi di laptop saya?
