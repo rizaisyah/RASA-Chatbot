@@ -22,7 +22,7 @@ nlu:
     - ya
     - ya bantu saya
     - ya tolong
-    - ya, saya Masuk
+    - ya, saya mau
 
 - intent: deny
   examples: |
@@ -50,12 +50,13 @@ nlu:
 - intent: pilih_ap
   examples: |
     - [AP999](issue_type)
-    - acesspoint
+    - acess point
+    - ap
 
 - intent: pilih_lan
   examples: |
     - [LAN999](issue_type)
-    - lan123
+    - lan
 
 - intent: pilih_smart_tv
   examples: |

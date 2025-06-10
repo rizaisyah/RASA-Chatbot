@@ -63,12 +63,14 @@ responses:
 #    - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
 #    - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
     - text: |
+        Pastikan kabel LAN terhubung dengan benar. Anda bisa memeriksanya di 'Network and Sharing Center' dan lihat apakah sudah mendapatkan IP.
+
+        Panduan ini digunakan untuk Laboran:
         1. Teknisi jaringan men-download malwarebyte dan juga melakukan update antivirus di komputer terlebih dahulu.
         2. Teknisi jaringan mencabut semua kabel LAN, dan menancapkan lagi satu demi satu kabel LAN sampai terdeteksi lagi ip conflict.
         3. Kabel LAN yang apabila dipasang menghasilkan ip conflict ditelusuri/dirunut sumbernya. Periksa ujungnya apakah sampai kepada komputer yang terdaftar dalam jaringan tersebut, atau kah komputer baru yang belum terdaftar dalam jaringan.
         4. Jika komputer sudah terdaftar, teknisi jaringan menancapkan lagi kabel LAN tersebut, dan mulai cabut satu persatu kabel LAN, sampai pesan ip conflict menghilang.
-        5. Teknisi jaringan merunut kabel LAN yang jika dicabut membuat pesan IP conflict menghilang.
-
+       
   utter_login_secure:
     - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi DTI UGM."
     - text: |
@@ -99,15 +101,12 @@ responses:
         3. Pilih Trust untuk memverifikasi Certificate.
 
   utter_login_hotspot:
-    - text: "Mungkin ada batasan akses atau masalah server. Coba sambungkan lagi setelah beberapa saat."
     - text: |
-        Panduan ini dapat digunakan untuk Teknisi/Tim IT:
-        1. Teknisi jaringan memastikan  bahwa Wireless Card komputer/laptop telah menyala.
-        2. Teknisi jaringan melakukan scanning sekali lagi sinyal UGM-Hotspot.
-        3. Teknisi jaringan melakukan scanning dengan perangkat/komputer/laptop/Smartphine lain untuk memastikan bahwa sinyal service set identification SSID dari Access Point UGM-Hotspot benar-benar tidak terpancar.
-        4. Apabila dideteksi dengan perangkat lain singal SSID dapat terdeteksi dengan baik, teknisi jaringan  memfokuskan masalah pada perangkat yang tidak dapat mendeteksi sinyal SSDI UGM-Hotspot tersebut
-        5. Apabila dengan perangkat lain sinyal Hotspot UGM tetap tidak terdeteksi, Teknisi jaringan merestart Power Over Ethernet (PoE) Wifi yang berada di ruang Server yaitu cara mecabut kabel adaptor dari PoE kemudian menancapkannya lagi, cabut dan tancapkan kembali kedua kabel UTP yang terhubung ke PoE. Lakukan untuk semua PoE yang ada."
-
+        1. Koneksikan laptop ke jaringan WiFi dengan nama WiFi UGM Hotspot
+        2. Buka web browser 
+        3. Buka website https://internet.ugm.ac.id maka secara otomatis akan muncul halaman login.
+        4. Masukkan Username dan Password sesuai akun yang sudah dimiliki.
+        
   # utter_connection_problem:
   #   - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi."
 
