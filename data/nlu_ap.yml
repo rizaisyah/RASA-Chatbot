@@ -10,20 +10,13 @@ nlu:
     - secure gak konek
     - login secure gagal
     - gak bisa login secure
-    - ugm secure no internet
-    - kenapa ugm secure mati?
     - jaringan ugm secure down
     - susah konek ke ugm secure
     - kok ugm secure gak bisa login?
     - error terus waktu login ke UGM Secure
     - gak bisa connect ugm secure
     - gimana cara konek ke UGM Secure?
-    - apakah UGM Secure sedang bermasalah?
     - saya tidak bisa sambung ke UGM Secure
-    - tidak muncul opsi login UGM Secure
-    - kenapa sinyal UGM Secure tidak ada?
-    - sudah masuk UGM Secure tapi tidak ada internet
-    - password UGM Secure tidak bisa dipakai
     - login ke UGM Secure selalu gagal otentikasi
 
 - intent: ap_login_hotspot
@@ -43,6 +36,35 @@ nlu:
     - gak bisa connect ugm hotspot
     - tidak ada koneksi dari hotspot kampus
     - sudah konek hotspot tapi tidak bisa login
-    - login ke hotspot kampus terus gagal
-    - apakah hotspot UGM sedang gangguan?
     - tidak bisa masuk halaman login ugm hotspot
+
+- intent: ap_internet_lambat
+  examples: |
+    - koneksi internet lambat
+    - internet lemot
+    - jaringan internet tidak stabil
+    - internet sangat lambat
+    - koneksi wifi lambat
+    - kecepatan internet sangat rendah
+    - jaringan wifi lemot
+    - internet tidak lancar
+    - speed internetnya pelan
+    - ap saya lemot
+    - jaringan saya lemot
+
+- intent: provide_device
+  examples: |
+    - Saya menggunakan [Windows](os_type)
+    - Device saya [MacOS](os_type)
+    - Saya pakai [Android](os_type)
+    - Saya memakai perangkat [Windows](os_type)
+    - Saya memakai [MacOS](os_type)
+    - Saya menggunakan [Android](os_type)
+    - Saya menggunakan [iPhone](os_type)
+    - Laptop saya [MacOS](os_type)
+    - Smartphone saya [Android](os_type)
+    - Hp saya [iPhone](os_type)
+    - Saya memakai [Android](os_type)
+    - Saya menggunakan [iPhone](os_type)
+
+

@@ -22,7 +22,7 @@ pipeline:
   max_ngram: 5
 
 - name: DIETClassifier
-  epochs: 50
+  epochs: 100
   dropout: 0.3
   learning_rate: 0.005
   batch_size: [32, 64]

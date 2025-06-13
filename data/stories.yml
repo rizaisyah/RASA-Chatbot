@@ -1,22 +1,30 @@
 version: "3.1"
 
 stories:
-- story: alur AP 2
+- story: alur AP 1 
   steps:
   - intent: ap_login_secure
-  - action: utter_login_secure
+  - action: utter_ask_device
+  - intent: provide_device
+    entities:
+      - os_type
+  - action: action_identify_device
   - action: utter_ask_again
 
-- story: alur AP 3
+- story: alur AP 2
   steps:
   - intent: ap_login_hotspot
   - action: utter_login_hotspot
   - action: utter_ask_again
 
+- story: alur AP 3
+  steps:
+  - intent: ap_internet_lambat
+  - action: utter_ap_internet_lambat
+  - action: utter_ask_again
+
 - story: alur LAN
   steps:
-  - intent: pilih_lan
-  - action: utter_pilih_lan
   - intent: lan_connection_problem
   - action: utter_lan_connection_problem
   - action: utter_ask_again

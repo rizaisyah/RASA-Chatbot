@@ -11,6 +11,11 @@ rules:
   - intent: pilih_smart_tv
   - action: utter_pilih_smart_tv
 
+- rule: pilih smart tv
+  steps:
+  - intent: pilih_lan
+  - action: utter_pilih_lan
+
 - rule: handle fallback
   steps:
     - intent: nlu_fallback

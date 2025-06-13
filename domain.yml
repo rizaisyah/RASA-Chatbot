@@ -12,6 +12,8 @@ intents:
   - lan_connection_problem
   - ap_login_secure
   - ap_login_hotspot
+  - ap_internet_lambat
+  - provide_device
   - tv_connect_device
   - tv_bluetooth
   - tv_soundbar
@@ -26,6 +28,7 @@ responses:
         Mohon sampaikan detail kendala yang Anda alami pada jaringan AP. Permasalahan umum yang dapat kami bantu meliputi:
         - Login UGM Hotspot.
         - Login UGM Secure.
+        - koneksi lambat.
 
   utter_pilih_lan:
     - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN."
@@ -58,10 +61,6 @@ responses:
         show_inline_menu: true
 
   utter_lan_connection_problem:
-#    - text: "Cek apakah lampu indikator pada port LAN menyala. Jika tidak, bisa jadi ada masalah dengan kabel atau port yang digunakan."
-#    - text: "Pastikan adapter jaringan di komputer Anda aktif. Anda bisa memeriksanya di 'Network and Sharing Center' pada Windows atau 'System Preferences' di macOS."
-#    - text: "Coba gunakan kabel LAN lain atau colok ke port yang berbeda untuk memastikan bukan masalah hardware."
-#    - text: "Pastikan konfigurasi IP di komputer Anda sudah benar. Coba gunakan perintah 'ipconfig /renew' di Command Prompt untuk mendapatkan IP baru."
     - text: |
         Pastikan kabel LAN terhubung dengan benar. Anda bisa memeriksanya di 'Network and Sharing Center' dan lihat apakah sudah mendapatkan IP.
 
@@ -99,6 +98,8 @@ responses:
         1. Klik setting WLAN pada iPhone.
         2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
         3. Pilih Trust untuk memverifikasi Certificate.
+  utter_ask_device:
+    - text: "Silakan pilih jenis perangkat (Windows, MacOS, Android, atau iPhone) yang Anda gunakan untuk mengakses jaringan AP ini."
 
   utter_login_hotspot:
     - text: |
@@ -106,9 +107,12 @@ responses:
         2. Buka web browser 
         3. Buka website https://internet.ugm.ac.id maka secara otomatis akan muncul halaman login.
         4. Masukkan Username dan Password sesuai akun yang sudah dimiliki.
-        
-  # utter_connection_problem:
-  #   - text: "Silakan forget jaringan Wi-Fi terlebih dahulu, lalu sambungkan kembali. Jika masih belum berhasil, pastikan akun SSO Anda telah digunakan untuk login ke jaringan Wi-Fi."
+  
+  utter_ap_internet_lambat:
+    - text: |
+        Cobalah untuk berada lebih dekat dengan access point Wi-Fi agar koneksi internet menjadi lebih stabil.
+
+        Jika masalah masih berlanjut, silakan menghubungi tim IT, email: tik.sv@ugm.ac.id.
 
   utter_tv_connect_device:
     - text: "Gunakan kabel HDMI untuk sambungan langsung, atau aktifkan screen mirroring jika menggunakan koneksi nirkabel."
@@ -186,10 +190,18 @@ slots:
     mappings:
       - type: from_entity
         entity: issue_type
+  os_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: os_type
 
 entities:
   - issue_type
+  - os_type
 
 actions:
   - action_session_start
   - action_contact_it_support
+  - action_identify_device

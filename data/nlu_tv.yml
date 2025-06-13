@@ -4,14 +4,13 @@ nlu:
 - intent: tv_connect_device
   examples: |
     - tv gak detect hp
-    - tv tidak terhubung ke perangkat
+    - Koneksi ke perangkat eksternal
     - kenapa hp saya gak konek ke tv?
     - tidak bisa sambung laptop ke smart tv
     - tv tidak menemukan perangkat saya
     - tv tidak muncul di hp saat mirroring
     - bagaimana menghubungkan hp ke smart tv?
     - kenapa hp saya tidak bisa tampil di tv?
-    - tidak bisa screen share ke tv
     - mau connect laptop ke tv tapi gagal
     - cara cast hp ke tv?
     - tv tidak merespon saat saya sambungkan perangkat
@@ -27,12 +26,9 @@ nlu:
 
 - intent: tv_bluetooth
   examples: |
+    - Sambungan ke Bluetooth
     - bluetooth tv tidak aktif
     - tv tidak mendeteksi bluetooth
-    - tv saya tidak bisa pairing dengan speaker
-    - kenapa bluetooth tv tidak jalan?
-    - tidak bisa konek headset ke tv
-    - bluetooth hp tidak ditemukan di tv
     - bagaimana cara sambungkan bluetooth ke tv?
     - koneksi bluetooth tv gagal terus
     - tv tidak bisa pairing bluetooth
@@ -41,9 +37,6 @@ nlu:
     - bluetooth speaker tidak muncul di tv
     - sudah nyalakan bluetooth tapi tidak bisa konek
     - cara menghubungkan soundbar ke tv lewat bluetooth
-    - kenapa smart tv saya tidak menemukan perangkat bluetooth?
-    - bluetooth tv tidak bisa diaktifkan
-    - pairing gagal antara tv dan hp
     - tv selalu gagal konek bluetooth
     - tidak bisa pairing mouse ke smart tv
     - tv tidak merespons koneksi bluetooth
@@ -51,6 +44,8 @@ nlu:
 
 - intent: tv_soundbar
   examples: |
+    - speaker tv mati
+    - Pengaturan soundbar
     - suara tv hilang
     - tv tidak bunyi
     - tidak ada suara dari tv
@@ -63,18 +58,16 @@ nlu:
     - suara dari tv delay saat pakai soundbar
     - cara pairing soundbar ke smart tv
     - tv tidak mendeteksi soundbar
-    - suara tv tidak sinkron dengan soundbar
-    - suara tv hilang setelah sambung soundbar
     - tv tidak mengeluarkan audio sama sekali
     - kabel sudah tersambung tapi tidak ada suara
     - bagaimana sambungkan tv ke soundbar lewat bluetooth?
-    - apakah soundbar saya kompatibel dengan tv ini?
-    - suara dari tv pecah saat sambung ke soundbar
     - soundbar nyala tapi tidak ada suara dari tv
-    - speaker tv mati
     
 - intent: tv_remot
   examples: |
+    - remot tidak terhubung
+    - remot mati
+    - Masalah pada remote TV
     - remote tv tidak berfungsi
     - tombol remote tidak merespons
     - remote tv mati
@@ -90,16 +83,14 @@ nlu:
     - remote hilang sinyal
     - remote tidak connect ke tv
     - tv tidak merespons perintah dari remote
-    - apakah remote saya perlu di-pairing ulang?
     - tidak bisa kendalikan tv dengan remote
     - lampu indikator remote tidak menyala
     - remote tiba-tiba tidak berfungsi
     - remote tv saya tidak terhubung setelah restart
-    - remot tidak terhubung
-    - remot mati
 
 - intent: tv_layar_hdmi
   examples: |
+    - Sambungan HDMI
     - tv tidak menampilkan tampilan dari laptop
     - tidak ada sinyal dari kabel hdmi
     - layar tv kosong setelah colok hdmi
@@ -124,6 +115,7 @@ nlu:
 
 - intent: tv_network
   examples: |
+    - Koneksi jaringan TV
     - tv tidak konek wifi
     - jaringan tv bermasalah
     - smart tv tidak bisa online
@@ -153,3 +145,4 @@ nlu:
     - tv blank
     - tv gak bisa hidup
     - tv gak nyala
+    - TV tidak menyala
