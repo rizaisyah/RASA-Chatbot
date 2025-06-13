@@ -36,17 +36,17 @@ nlu:
     - tidak, terima kasih
     - gak makasih
 
-- intent: nlu_fallback
-  examples: |
-    - {input pengguna yang tidak terdeteksi}
-
 - intent: out_of_scope
   examples: |
+    - Apa itu?
     - router saya tidak berfungsi
-    - smart tv saya error tidak dan black screen
+    - smart tv saya error dan black screen
     - saya mendapatan internet yang lambat
+    - lupa password wifi
+    - akun saya tidak bisa login
+    - Ada masalah dengan laptop saya
+    - internet jelek 
 
-# berbeda yeah
 - intent: pilih_ap
   examples: |
     - [AP999](issue_type)
@@ -57,8 +57,10 @@ nlu:
   examples: |
     - [LAN999](issue_type)
     - lan
+    - kabel lan
 
 - intent: pilih_smart_tv
   examples: |
     - Smart TV
+    - TV
     - [smart tv999](issue_type)

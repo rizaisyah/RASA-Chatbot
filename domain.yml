@@ -4,7 +4,6 @@ intents:
   - greet
   - affirm
   - deny
-  - nlu_fallback
   - out_of_scope
   - pilih_ap
   - pilih_lan
@@ -70,34 +69,34 @@ responses:
         3. Kabel LAN yang apabila dipasang menghasilkan ip conflict ditelusuri/dirunut sumbernya. Periksa ujungnya apakah sampai kepada komputer yang terdaftar dalam jaringan tersebut, atau kah komputer baru yang belum terdaftar dalam jaringan.
         4. Jika komputer sudah terdaftar, teknisi jaringan menancapkan lagi kabel LAN tersebut, dan mulai cabut satu persatu kabel LAN, sampai pesan ip conflict menghilang.
        
-  utter_login_secure:
-    - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi DTI UGM."
-    - text: |
-        Ikuti panduan ini untuk OS Windows:
-        1. Koneksikan wifi ke UGM-Secure.
-        2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
-        3. Jika sudah, klik OK, kemudian jika muncul Certificate pilih Connect untuk memverifikasi.
+  # utter_login_secure:
+  #   - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi DTI UGM."
+  #   - text: |
+  #       Ikuti panduan ini untuk OS Windows:
+  #       1. Koneksikan wifi ke UGM-Secure.
+  #       2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
+  #       3. Jika sudah, klik OK, kemudian jika muncul Certificate pilih Connect untuk memverifikasi.
 
-        Ikuti panduan ini untuk MacOS:
-        1. Koneksikan wifi ke UGM-Secure.
-        2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
-        3. Jika muncul pop up Verify Certificate pilih Continue untuk memverifikasi.
+  #       Ikuti panduan ini untuk MacOS:
+  #       1. Koneksikan wifi ke UGM-Secure.
+  #       2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
+  #       3. Jika muncul pop up Verify Certificate pilih Continue untuk memverifikasi.
 
-        Ikuti panduan ini untuk Android:
-        1. Koneksikan wifi ke UGM-Secure.
-        2. Isi form sebagai berikut:
-            EAP METHOD: TTLS
-            PHASE 2 AUTHENTICATION : PAP
-            CA CERTIFICATE: (unspecified)
-            Identity: email ugm (tanpa @ugm.ac.id/@mail.ugm.ac.id)
-            Anonymous identity: email ugm
-            Password: password email ugm
-        3. Kemudian klik connect.
+  #       Ikuti panduan ini untuk Android:
+  #       1. Koneksikan wifi ke UGM-Secure.
+  #       2. Isi form sebagai berikut:
+  #           EAP METHOD: TTLS
+  #           PHASE 2 AUTHENTICATION : PAP
+  #           CA CERTIFICATE: (unspecified)
+  #           Identity: email ugm (tanpa @ugm.ac.id/@mail.ugm.ac.id)
+  #           Anonymous identity: email ugm
+  #           Password: password email ugm
+  #       3. Kemudian klik connect.
 
-        Ikuti panduan ini untuk Iphone:
-        1. Klik setting WLAN pada iPhone.
-        2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
-        3. Pilih Trust untuk memverifikasi Certificate.
+  #       Ikuti panduan ini untuk Iphone:
+  #       1. Klik setting WLAN pada iPhone.
+  #       2. Muncul halaman login yang berisikan username dan password. Isikan dengan username tanpa "@mail.ugm.ac.id" dan password yang sama dengan SSO UGM.
+  #       3. Pilih Trust untuk memverifikasi Certificate.
   utter_ask_device:
     - text: "Silakan pilih jenis perangkat (Windows, MacOS, Android, atau iPhone) yang Anda gunakan untuk mengakses jaringan AP ini."
 

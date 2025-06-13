@@ -16,11 +16,6 @@ rules:
   - intent: pilih_lan
   - action: utter_pilih_lan
 
-- rule: handle fallback
-  steps:
-    - intent: nlu_fallback
-    - action: action_contact_it_support
-    - action: utter_ask_again
 
 - rule: handle out of scope
   steps:

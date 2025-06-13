@@ -24,10 +24,10 @@ pipeline:
 - name: DIETClassifier
   epochs: 100
   dropout: 0.3
-  learning_rate: 0.005
-  batch_size: [32, 64]
+  learning_rate: 0.001
+  batch_size: 32
   embedding_dimension: 50
-  constrain_similarities: true
+  constrain_similarities: True
   tensorboard_log_directory: "tensorboard"
   tensorboard_log_level: "epoch"
 
