@@ -11,11 +11,19 @@ rules:
   - intent: pilih_smart_tv
   - action: utter_pilih_smart_tv
 
-- rule: pilih smart tv
+- rule: pilih smart lan
   steps:
   - intent: pilih_lan
   - action: utter_pilih_lan
 
+- rule: pilih smart lan
+  condition:
+  - slot_was_set:
+    - issue_type: "LAN999"
+  steps:
+  - intent: lan_connection_problem
+  - action: utter_lan_connection_problem
+  - action: utter_ask_again
 
 - rule: handle out of scope
   steps:

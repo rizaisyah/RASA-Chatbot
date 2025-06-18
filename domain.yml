@@ -27,10 +27,12 @@ responses:
         Mohon sampaikan detail kendala yang Anda alami pada jaringan AP. Permasalahan umum yang dapat kami bantu meliputi:
         - Login UGM Hotspot.
         - Login UGM Secure.
-        - koneksi lambat.
+        - Internet lambat.
 
   utter_pilih_lan:
-    - text: "Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN."
+    - text: |
+        Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN (gunakna kata kunci 'LAN'). Permasalahan umum yang dapat kami bantu meliputi:
+        - LAN tidak terhubung.
 
   utter_pilih_smart_tv:
     - text: |

@@ -25,7 +25,11 @@ stories:
 
 - story: alur LAN
   steps:
+  - intent: pilih_lan
+  - action: utter_pilih_lan
   - intent: lan_connection_problem
+    entities:
+      - issue_type: "LAN999"
   - action: utter_lan_connection_problem
   - action: utter_ask_again
 
