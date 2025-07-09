@@ -16,20 +16,19 @@ rules:
   - intent: pilih_lan
   - action: utter_pilih_lan
 
-- rule: pilih smart lan
-  condition:
-  - slot_was_set:
-    - issue_type: "LAN999"
-  steps:
-  - intent: lan_connection_problem
-  - action: utter_lan_connection_problem
-  - action: utter_ask_again
+# - rule: pilih smart lan
+#   condition:
+#   - slot_was_set:
+#     - issue_type: "LAN999"
+#   steps:
+#   - intent: lan_connection_problem
+#   - action: utter_lan_connection_problem
+#   - action: utter_ask_again
 
 - rule: handle out of scope
   steps:
     - intent: out_of_scope
     - action: action_contact_it_support
-    - action: utter_ask_again
 
 # TAMBAHAN
 - rule: user responds iya setelah tanya ulang

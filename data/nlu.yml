@@ -46,6 +46,12 @@ nlu:
     - akun saya tidak bisa login
     - Ada masalah dengan laptop saya
     - internet jelek 
+    - Akses point dimana?
+    - Kerusakan pada kabel dan konektor
+    - switch rusak
+    - kok masih gak bisa ya?
+    - oh gitu, tapi masi tidak bisa
+    
 
 - intent: pilih_ap
   examples: |

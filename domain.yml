@@ -9,6 +9,8 @@ intents:
   - pilih_lan
   - pilih_smart_tv
   - lan_connection_problem
+  - lan_ip_conflict
+  - lan_port_problem
   - ap_login_secure
   - ap_login_hotspot
   - ap_internet_lambat
@@ -18,7 +20,6 @@ intents:
   - tv_soundbar
   - tv_remot
   - tv_layar_hdmi
-  - tv_network
   - tv_mati
 
 responses:
@@ -31,8 +32,9 @@ responses:
 
   utter_pilih_lan:
     - text: |
-        Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN (gunakna kata kunci 'LAN'). Permasalahan umum yang dapat kami bantu meliputi:
+        Mohon sampaikan detail kendala yang Anda alami pada jaringan LAN (gunakan kata kunci 'LAN'). Permasalahan umum yang dapat kami bantu meliputi:
         - LAN tidak terhubung.
+        - IP conflict.
 
   utter_pilih_smart_tv:
     - text: |
@@ -42,7 +44,6 @@ responses:
         - Pengaturan soundbar.
         - Masalah pada remote TV.
         - Sambungan HDMI.
-        - Koneksi jaringan TV
         - TV tidak menyala.
 
   utter_ask_again:
@@ -65,12 +66,19 @@ responses:
     - text: |
         Pastikan kabel LAN terhubung dengan benar. Anda bisa memeriksanya di 'Network and Sharing Center' dan lihat apakah sudah mendapatkan IP.
 
+  utter_lan_ip_conflict:
+    - text: |
+        Komputer yang ada di TILC menggunakan IP statis, silahkan untuk hubungi laboran atau tim IT untuk mengetahui rentang IP yang digunakan oleh komputer.
+
         Panduan ini digunakan untuk Laboran:
         1. Teknisi jaringan men-download malwarebyte dan juga melakukan update antivirus di komputer terlebih dahulu.
         2. Teknisi jaringan mencabut semua kabel LAN, dan menancapkan lagi satu demi satu kabel LAN sampai terdeteksi lagi ip conflict.
         3. Kabel LAN yang apabila dipasang menghasilkan ip conflict ditelusuri/dirunut sumbernya. Periksa ujungnya apakah sampai kepada komputer yang terdaftar dalam jaringan tersebut, atau kah komputer baru yang belum terdaftar dalam jaringan.
         4. Jika komputer sudah terdaftar, teknisi jaringan menancapkan lagi kabel LAN tersebut, dan mulai cabut satu persatu kabel LAN, sampai pesan ip conflict menghilang.
-       
+
+  utter_lan_port_problem:
+    - text: "Untuk masalah port pada LAN, Silakan menghubungi laboran atau tim IT."
+
   # utter_login_secure:
   #   - text: "Untuk login ke UGM Secure, pastikan Anda memasukkan username dan password yang benar. Jika masih gagal, coba reset password atau hubungi DTI UGM."
   #   - text: |
@@ -143,20 +151,20 @@ responses:
         3. Ubah opsi Speaker menjadi Sistem Audio atau Audio Eksternal, tergantung model TV.
         4. Aktifkan fitur kontrol HDMI, seperti HDMI-CEC, jika tersedia.
       
-  utter_tv_network:
-    - text: |
-        Berikut adalah langkah-langkah umum untuk menyambungkan TV ke jaringan Wi-Fi:
+  # utter_tv_network:
+  #   - text: |
+  #       Berikut adalah langkah-langkah umum untuk menyambungkan TV ke jaringan Wi-Fi:
 
-        1. Buka menu pengaturan pada TV Anda.
-        2. Akses bagian Jaringan atau Jaringan & Internet.
-        3. Pilih opsi Wi-Fi, lalu aktifkan jika belum aktif.
-        4. Pilih jaringan Wi-Fi yang tersedia dari daftar yang dipindai.
+  #       1. Buka menu pengaturan pada TV Anda.
+  #       2. Akses bagian Jaringan atau Jaringan & Internet.
+  #       3. Pilih opsi Wi-Fi, lalu aktifkan jika belum aktif.
+  #       4. Pilih jaringan Wi-Fi yang tersedia dari daftar yang dipindai.
 
-        Setelah memilih jaringan:
-        - Tekan tombol Enter pada remote.
-        - Masukkan kata sandi jaringan dengan benar.
-        - Jika terdapat huruf kapital pada sandi, gunakan tombol panah atas pada keyboard di layar untuk mengaktifkan huruf besar, dan tekan lagi untuk kembali ke huruf kecil.
-        - Tekan tombol "Next", "Enter", atau "Finish" untuk menyelesaikan proses koneksi.
+  #       Setelah memilih jaringan:
+  #       - Tekan tombol Enter pada remote.
+  #       - Masukkan kata sandi jaringan dengan benar.
+  #       - Jika terdapat huruf kapital pada sandi, gunakan tombol panah atas pada keyboard di layar untuk mengaktifkan huruf besar, dan tekan lagi untuk kembali ke huruf kecil.
+  #       - Tekan tombol "Next", "Enter", atau "Finish" untuk menyelesaikan proses koneksi.
 
   utter_tv_remot:
     - text: |
@@ -182,7 +190,11 @@ responses:
       Jika setelah semua langkah di atas gambar tetap tidak muncul, bisa jadi ada gangguan pada port HDMI, kabel, atau pengaturan perangkat. Coba sambungkan ke perangkat lain untuk memastikan sumber masalahnya.
 
   utter_tv_mati:
-  - text: "Periksa kembali kabel yang terhubung ke aliran listrik. Jika tetap tidak menyala, silahkan hubungi laboran tau tim IT"
+  - text: "Periksa kembali kabel yang terhubung ke aliran listrik. Jika tetap tidak menyala, silahkan hubungi laboran tau tim IT."
+
+session_config:
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: true
 
 slots:
   issue_type:

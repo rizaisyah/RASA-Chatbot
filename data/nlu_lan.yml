@@ -25,8 +25,6 @@ nlu:
     - kabel sudah dicolok tapi internet gak ada
     - status LAN limited access
     - jaringan LAN tiba-tiba down
-    - LAN tidak terhubung ke jaringan
-    - port LAN tidak berfungsi
     - sudah ganti kabel tapi tetap tidak bisa
     - internet lewat LAN lemot banget
     - jaringan kabel tidak stabil
@@ -35,3 +33,33 @@ nlu:
     - laptop saya tidka bisa terhubung ke LAN
     - LAN tidak terdeteksi di komputer
     - komputer saya tidak bisa terhubung ke internet
+
+- intent: lan_ip_conflict
+  examples: |
+    - IP conflict
+    - ada konflik IP di jaringan
+    - IP address bentrok
+    - IP address sudah dipakai perangkat lain
+    - IP address tidak unik
+    - IP address sudah digunakan oleh perangkat lain
+    - ada perangkat lain yang menggunakan IP saya
+    - IP saya bentrok dengan perangkat lain
+    - IP saya tidak bisa digunakan karena bentrok
+    - ada masalah dengan IP address di jaringan LAN
+    - konflik alamat IP di jaringan LAN
+    - IP address saya tidak valid karena bentrok
+
+- intent: lan_port_problem
+  examples: |
+    - port LAN tidak berfungsi
+    - port LAN tidak terdeteksi
+    - port LAN tidak bisa digunakan
+    - port LAN tidak aktif
+    - port LAN tidak merespons
+    - port LAN tidak terhubung
+    - port LAN bermasalah
+    - port LAN error
+    - port LAN mati
+    - port LAN tidak mengeluarkan sinyal
+    - lampu indikator port LAN mati
+    - kabel LAN sudah dicolok tapi port tidak berfungsi

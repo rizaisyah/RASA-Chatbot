@@ -23,7 +23,7 @@ stories:
   - action: utter_ap_internet_lambat
   - action: utter_ask_again
 
-- story: alur LAN
+- story: alur LAN 1
   steps:
   - intent: pilih_lan
   - action: utter_pilih_lan
@@ -31,6 +31,18 @@ stories:
     entities:
       - issue_type: "LAN999"
   - action: utter_lan_connection_problem
+  - action: utter_ask_again
+
+- story: alur LAN 2
+  steps:
+  - intent: lan_ip_conflict
+  - action: utter_lan_ip_conflict
+  - action: utter_ask_again
+
+- story: alur LAN 3
+  steps:
+  - intent: lan_port_problem
+  - action: utter_lan_port_problem
   - action: utter_ask_again
 
 - story: alur TV 1
@@ -61,12 +73,6 @@ stories:
   steps:
   - intent: tv_layar_hdmi
   - action: utter_tv_layar_hdmi
-  - action: utter_ask_again
-
-- story: alur TV 6
-  steps:
-  - intent: tv_network
-  - action: utter_tv_network
   - action: utter_ask_again
 
 - story: alur TV 7

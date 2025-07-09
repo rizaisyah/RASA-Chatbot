@@ -3,36 +3,25 @@ recipe: default.v1
 
 pipeline:
 - name: WhitespaceTokenizer
-
 - name: RegexFeaturizer
   use_word_boundaries: true
   use_lookup_tables: true
   use_regexes: true
-
 - name: LexicalSyntacticFeaturizer
-
 - name: CountVectorsFeaturizer
   analyzer: word
   min_ngram: 1
   max_ngram: 2
-
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 3
-  max_ngram: 5
-
 - name: DIETClassifier
-  epochs: 100
-  dropout: 0.3
+  epochs: 40
+  dropout: 0.4
   learning_rate: 0.001
   batch_size: 32
   embedding_dimension: 50
-  constrain_similarities: True
+  constrain_similarities: true
   tensorboard_log_directory: "tensorboard"
   tensorboard_log_level: "epoch"
-
 - name: EntitySynonymMapper
-
 - name: FallbackClassifier
   threshold: 0.3
   ambiguity_threshold: 0.2
